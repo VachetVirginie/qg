@@ -4,6 +4,7 @@ import { parseArgs } from 'node:util'
 const root = new URL('../', import.meta.url)
 const content = new URL('contenu/', root)
 const pages = new URL('fiches/', root)
+const topics = new URL('sujets.txt', root)
 const today = new Intl.DateTimeFormat('fr-CA', { timeZone: 'Europe/Paris' }).format(new Date())
 const frenchDate = new Intl.DateTimeFormat('fr-FR', { dateStyle: 'long', timeZone: 'UTC' })
 const sentenceSegmenter = new Intl.Segmenter('fr', { granularity: 'sentence' })
@@ -76,47 +77,98 @@ async function* qualityArticles() {
   }
 }
 
-async function createFiche(fiches, subject) {
-  const used = new Set(fiches.map(fiche => fiche.pageId))
-  if (!subject && fiches.some(fiche => fiche.date === today)) {
+async function getArticle(query) {
+  const data = await wiki({
+    ...query, prop: 'extracts|info|pageprops', exintro: '1',
+    explaintext: '1', redirects: '1', ppprop: 'disambiguation',
+  })
+  const [article] = data.query?.pages ?? []
+  if (article && !article.missing && article.ns === 0 && !('disambiguation' in (article.pageprops ?? {}))) {
+    return article
+  }
+}
+
+async function findSubject(subject) {
+  const exact = await getArticle({ titles: subject })
+  if (exact) return exact
+
+  const results = await wiki({
+    list: 'search', srsearch: subject, srnamespace: '0', srlimit: '1', srprop: '',
+  })
+  const match = results.query?.search?.[0]
+  if (match) return getArticle({ pageids: match.pageid })
+}
+
+async function saveFiche(fiches, article, paragraphs) {
+  const fiche = {
+    number: (fiches.at(-1)?.number ?? 0) + 1,
+    date: today,
+    title: article.title,
+    pageId: article.pageid,
+    revision: article.lastrevid,
+    paragraphs,
+  }
+  await writeFile(new URL(`${identifier(fiche)}.json`, content), JSON.stringify(fiche, null, 2) + '\n', { flag: 'wx' })
+  fiches.push(fiche)
+  console.log(`Fiche #${identifier(fiche)} créée · ${fiche.title}`)
+}
+
+async function publishSubject(fiches, subject) {
+  const article = await findSubject(subject)
+  if (!article) return 'unavailable'
+  if (fiches.some(fiche => fiche.pageId === article.pageid)) {
+    console.log(`Une fiche existe déjà pour « ${article.title} ».`)
+    return 'duplicate'
+  }
+
+  const paragraphs = getExcerpt(article.extract ?? '')
+  if (!paragraphs.length) return 'unavailable'
+
+  await saveFiche(fiches, article, paragraphs)
+  return 'published'
+}
+
+async function publishQueuedSubject(fiches) {
+  const original = await readFile(topics, 'utf8')
+  const lines = original.split(/\r?\n/)
+  let published = false
+  for (const [index, line] of lines.entries()) {
+    if (published) break
+    const subject = line.trim().replace(/^(?:[-*•]|\d+[.)])\s+/, '')
+    if (!subject || subject.startsWith('#')) continue
+
+    const result = await publishSubject(fiches, subject)
+    lines[index] = result === 'unavailable' ? `# À préciser : ${subject}` : null
+    if (result === 'unavailable') console.log(`Aucun extrait adapté pour « ${subject} ».`)
+    published = result === 'published'
+  }
+
+  const updated = lines.filter(line => line !== null).join('\n')
+  if (updated !== original) await writeFile(topics, updated)
+  return published
+}
+
+async function publishDaily(fiches) {
+  if (fiches.some(fiche => fiche.date === today)) {
     console.log(`Une fiche est déjà disponible pour le ${today}.`)
     return
   }
+  if (await publishQueuedSubject(fiches)) return
 
+  const used = new Set(fiches.map(fiche => fiche.pageId))
   let attempts = 0
-  for await (const query of subject ? [{ titles: subject }] : qualityArticles()) {
+  for await (const query of qualityArticles()) {
     if (used.has(query.pageids)) continue
     if (attempts++ >= 24) break
-    const data = await wiki({
-      ...query, prop: 'extracts|info|pageprops', exintro: '1',
-      explaintext: '1', redirects: '1', ppprop: 'disambiguation',
-    })
-    const [article] = data.query?.pages ?? []
-    if (!article || article.missing || article.ns !== 0 || 'disambiguation' in (article.pageprops ?? {})) continue
-    if (used.has(article.pageid)) {
-      if (!subject) continue
-      console.log(`Une fiche existe déjà pour « ${article.title} ».`)
-      return
-    }
+    const article = await getArticle(query)
+    if (!article || used.has(article.pageid)) continue
     const paragraphs = getExcerpt(article.extract ?? '')
     if (!paragraphs.length) continue
-    const fiche = {
-      number: (fiches.at(-1)?.number ?? 0) + 1,
-      date: today,
-      title: article.title,
-      pageId: article.pageid,
-      revision: article.lastrevid,
-      paragraphs,
-    }
-    await writeFile(new URL(`${identifier(fiche)}.json`, content), JSON.stringify(fiche, null, 2) + '\n', { flag: 'wx' })
-    fiches.push(fiche)
-    console.log(`Fiche #${identifier(fiche)} créée · ${fiche.title}`)
+    await saveFiche(fiches, article, paragraphs)
     return
   }
 
-  throw new Error(subject
-    ? `Aucun extrait adapté pour « ${subject} ». Utilise le titre exact d’un article de Wikipédia en français.`
-    : 'Aucun article inédit avec un extrait de longueur adaptée n’a été trouvé.')
+  throw new Error('Aucun article inédit avec un extrait de longueur adaptée n’a été trouvé.')
 }
 
 function identifier(fiche) {
@@ -158,6 +210,7 @@ function homepage(fiches) {
       <p class="eyebrow">QG · Collection A5</p>
       <h1>Carnets de<br class="display-break"> culture générale</h1>
       <p class="intro">Une fiche à découvrir chaque jour, à lire ou à imprimer.</p>
+      <a class="topics-link" href="https://github.com/VachetVirginie/qg/edit/main/sujets.txt">Ajouter des sujets sur GitHub</a>
     </div>
     <p class="count"><strong>${fiches.length}</strong> ${fiches.length === 1 ? 'fiche' : 'fiches'}</p>
   </header>
@@ -207,6 +260,12 @@ const filenames = (await readdir(content)).filter(name => /^\d+\.json$/.test(nam
 const fiches = await Promise.all(filenames.map(async name => JSON.parse(await readFile(new URL(name, content), 'utf8'))))
 fiches.sort((first, second) => first.number - second.number)
 
-if (values.daily || values.subject?.trim()) await createFiche(fiches, values.subject?.trim())
+const subject = values.subject?.trim()
+if (subject) {
+  const result = await publishSubject(fiches, subject)
+  if (result === 'unavailable') throw new Error(`Aucun extrait adapté pour « ${subject} ». Essaie un titre plus précis.`)
+} else if (values.daily) {
+  await publishDaily(fiches)
+}
 await writeFile(new URL('index.html', root), homepage(fiches))
 await Promise.all(fiches.map(fiche => writeFile(new URL(`${identifier(fiche)}.html`, pages), fichePage(fiche))))

@@ -6,7 +6,13 @@ Des fiches en français d’environ 190 mots, consultables sur mobile et imprima
 
 Dans **Settings → Pages → Build and deployment**, sélectionner **GitHub Actions** comme source. Le workflow **Carnets QG** publie le site à chaque modification de `main` et programme une nouvelle fiche à 8 h 17 (heure de Paris) chaque jour. GitHub peut décaler le démarrage. Consulter l’onglet **Actions** pour suivre la génération et le déploiement.
 
-Pour publier à la demande, y compris depuis Safari sur iPhone, ouvrir **Actions → Carnets QG → Run workflow** sur `main`. Le champ facultatif accepte le titre exact d’un article de Wikipédia en français. Un lancement sans sujet utilise un article labellisé et conserve une seule publication automatique par jour. Un sujet saisi permet une fiche supplémentaire si l’article n’a jamais été publié.
+## Proposer des sujets
+
+Ouvre [le fichier de sujets sur GitHub](https://github.com/VachetVirginie/qg/edit/main/sujets.txt) avec ton compte GitHub. Saisis **un sujet par ligne** dans `sujets.txt`, dans l’ordre souhaité, puis choisis **Commit changes** et enregistre sur `main`. Tu peux coller une liste à puces ou numérotée.
+
+Le workflow donne la priorité aux sujets de la liste et publie un sujet par jour. Il recherche l’article correspondant sur Wikipédia en français, puis retire le sujet de la liste si la fiche est publiée ou existe déjà. Un sujet sans extrait adapté reste visible avec le préfixe `# À préciser :`. Reformule-le et retire le préfixe pour le remettre dans la liste. En l’absence de sujet disponible, le workflow sélectionne un article labellisé.
+
+Pour publier un sujet immédiatement, ouvrir **Actions → Carnets QG → Run workflow** et remplir le champ `subject`. Le laisser vide suit la liste d’attente et publie uniquement si la fiche du jour est encore à créer.
 
 ## Travail local
 

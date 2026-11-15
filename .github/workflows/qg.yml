@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       subject:
-        description: 'Titre exact sur Wikipédia (laisser vide pour un sujet automatique)'
+        description: 'Sujet à publier tout de suite (laisser vide pour suivre la liste d’attente)'
         required: false
         type: string
 
@@ -44,7 +44,7 @@ jobs:
       - name: Enregistrer le catalogue et les fiches dans le dépôt
         if: github.event_name != 'push'
         run: |
-          git add contenu fiches index.html
+          git add contenu fiches index.html sujets.txt
           if ! git diff --cached --quiet; then
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
