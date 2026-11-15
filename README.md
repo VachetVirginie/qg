@@ -1,28 +1,34 @@
 # QG · Carnets de culture générale
 
-Des fiches en français d’environ 190 mots, consultables sur mobile et imprimables au format A5 depuis le navigateur.
-
-## Publication
-
-Dans **Settings → Pages → Build and deployment**, sélectionner **GitHub Actions** comme source. Le workflow **Carnets QG** publie le site à chaque modification de `main` et programme une nouvelle fiche à 8 h 17 (heure de Paris) chaque jour. GitHub peut décaler le démarrage. Consulter l’onglet **Actions** pour suivre la génération et le déploiement.
+Les [Carnets QG](https://vachetvirginie.github.io/qg/) publient des fiches en français calibrées pour la recopie. Le corps de chaque fiche contient de 185 à 200 mots, référence comprise. Les libellés de sections, le titre et la légende du croquis ne sont pas comptés.
 
 ## Proposer des sujets
 
-Ouvre [le fichier de sujets sur GitHub](https://github.com/VachetVirginie/qg/edit/main/sujets.txt) avec ton compte GitHub. Saisis **un sujet par ligne** dans `sujets.txt`, dans l’ordre souhaité, puis choisis **Commit changes** et enregistre sur `main`. Tu peux coller une liste à puces ou numérotée.
+Ouvre [la liste personnelle sur GitHub](https://github.com/VachetVirginie/qg/edit/main/sujets.txt). Ajoute un sujet par ligne, éventuellement précédé d’un domaine, par exemple `Mythologie | Supplice de Tantale` ou `Droit | La séparation des pouvoirs`. Les puces et lignes numérotées sont acceptées. Enregistre sur `main` via **Commit changes**.
 
-Le workflow donne la priorité aux sujets de la liste et publie un sujet par jour. Il recherche l’article correspondant sur Wikipédia en français, puis retire le sujet de la liste si la fiche est publiée ou existe déjà. Un sujet sans extrait adapté reste visible avec le préfixe `# À préciser :`. Reformule-le et retire le préfixe pour le remettre dans la liste. En l’absence de sujet disponible, le workflow sélectionne un article labellisé.
+Le tirage quotidien à 8 h 17, heure de Paris, favorise les sources les moins représentées dans les dix dernières fiches. La liste personnelle et la culture générale ont le même poids. Un événement récent, documenté et pertinent peut entrer dans le tirage avec un poids inférieur. Le tirage exclut les sujets déjà couverts par titre, alias et identifiants Wikipédia ou Wikidata et refuse deux mythes ou légendes successifs. Les sujets restent dans la liste pour conserver les propositions.
 
-Pour publier un sujet immédiatement, ouvrir **Actions → Carnets QG → Run workflow** et remplir le champ `subject`. Le laisser vide suit la liste d’attente et publie uniquement si la fiche du jour est encore à créer.
+## Publication quotidienne
+
+GitHub Pages déploie depuis **Actions → Carnets QG**. Le champ `subject` permet de publier à la demande. Un lancement sans champ applique le tirage du jour et ignore une date déjà publiée.
+
+La rédaction et la recherche d’actualité automatiques s’activent avec le secret GitHub Actions `OPENAI_API_KEY` dans **Settings → Secrets and variables → Actions**. La clé reste côté GitHub Actions. La variable facultative `OPENAI_MODEL` permet de choisir un modèle compatible avec Responses API, recherche web et sorties structurées. Par défaut le workflow utilise `gpt-5.4-mini`. Les sujets, l’historique des titres et les sources nécessaires à la rédaction sont transmis à l’API, dont l’utilisation est facturée sur le compte associé à la clé.
+
+Sans clé, le tirage publie les fiches déjà rédigées et calibrées dans `data/fiches-pretes.json`, parmi les sujets des deux listes. Lorsque la réserve ne contient plus de fiche éligible, le workflow signale l’épuisement. Pour enrichir la réserve, ajouter une fiche validée et son titre ou un alias à la liste correspondante. Les fiches publiées sont conservées dans `contenu/`.
+
+## Lecture et impression
+
+Chaque fiche affiche deux phrases d’accroche, trois points clés, une anecdote, un croquis et une référence. Les boutons permettent de choisir le thème sombre, d’afficher les points tous les 5 mm et d’ouvrir le dialogue natif d’impression au format A5 portrait. Choisis **Enregistrer en PDF** dans le navigateur. Sur iPhone, utilise le partage de l’aperçu pour enregistrer le document dans Fichiers.
 
 ## Travail local
 
-Avec Node.js 24, sans installation de dépendances :
+Avec Node.js 24 et pnpm 10 :
 
 ```sh
-node scripts/qg.mjs
+pnpm install --frozen-lockfile
+pnpm test
+pnpm build
 python3 -m http.server 8000
 ```
 
-Ouvrir <http://localhost:8000>. Pour produire une fiche via Wikipédia, utiliser `node scripts/qg.mjs --daily` ou `node scripts/qg.mjs --subject 'La Nuit étoilée (Van Gogh)'`. Les données éditoriales sont dans `contenu/`. Le script génère `index.html` et les pages `fiches/*.html`.
-
-La génération sélectionne des phrases entières de l’introduction de l’article, avec une longueur cible de 180 à 205 mots. Elle accepte des extraits d’au moins 135 mots pour s’arrêter sur une phrase complète. Chaque fiche attribue l’extrait, indique qu’il est abrégé et renvoie vers la version de l’article et sa licence.
+Ouvre <http://localhost:8000>. La commande `node scripts/qg.mjs --daily` effectue le tirage si la date n’est pas déjà représentée. `node scripts/qg.mjs --subject 'Montjuïc à Barcelone'` demande un sujet précis. Les liens numérotés d’origine restent valides.

@@ -1,0 +1,133 @@
+[
+  {
+    "title": "Supplice de Tantale",
+    "domain": "Mythologie",
+    "source": "personnel",
+    "intro": [
+      "Dans l’Odyssée, Tantale a de l’eau tout autour de lui et des fruits au-dessus de la tête.",
+      "Chaque fois qu’il essaie de boire ou de manger, ce qu’il désire se dérobe."
+    ],
+    "mecanisme": "Ulysse aperçoit Tantale parmi les morts. Quand le condamné se penche, l’eau disparaît et le sol se découvre à ses pieds. Quand il tend le bras, le vent soulève les branches hors de sa portée.",
+    "portee": "La punition repose sur une proximité trompeuse. Voir une chose à portée de main suffit à faire renaître l’espoir, puis le mouvement même qui devait l’atteindre déclenche sa disparition. Le geste recommence avec le désir.",
+    "posterite": "L’expression « supplice de Tantale » s’emploie encore pour une satisfaction toujours proche et toujours refusée. Le récit ancien a transmis une image qui permet de raconter très vite un sentiment de frustration.",
+    "anecdote": "Tous les poètes ne donnent pas le même décor à la peine. Chez Pindare, une pierre suspendue menace de tomber sur Tantale. Retenir les deux images permet de reconnaître des versions différentes d’un même personnage. La pierre apparaît notamment dans la Première Olympique de Pindare.",
+    "reference": {
+      "label": "Éduscol, « Châtiment de Tantale », Homère, Odyssée XI, vers 582 à 591, et Pindare",
+      "url": "https://odysseum.eduscol.education.fr/chatiment-de-tantale"
+    },
+    "sketch": {
+      "motif": "branches",
+      "caption": "Une branche en hauteur figure les fruits qui échappent à Tantale."
+    },
+    "aliases": [
+      "Tantale (mythologie)",
+      "Tantale"
+    ],
+    "pageId": 22613,
+    "entity": "Q397676"
+  },
+  {
+    "title": "Tonneau des Danaïdes",
+    "domain": "Mythologie",
+    "source": "personnel",
+    "intro": [
+      "Les Danaïdes sont les filles de Danaos, roi légendaire d’Argos.",
+      "Leur châtiment le plus célèbre consiste à remplir sans fin un récipient qui laisse échapper son eau."
+    ],
+    "mecanisme": "Les jeunes femmes sont mariées aux fils d’Égyptos, leur oncle. Danaos demande à ses filles de tuer leurs époux pendant la nuit des noces. La plupart obéissent, tandis qu’Hypermnestre épargne Lyncée.",
+    "portee": "Le récipient percé rend chaque effort inutile sans empêcher le suivant. Tout ce qui est versé se perd, si bien que le niveau attendu ne peut jamais être atteint. Le décor des Enfers transforme un geste quotidien en peine.",
+    "posterite": "L’expression « tonneau des Danaïdes » désigne une entreprise qui absorbe continuellement du travail, de l’argent ou du temps sans arriver à son terme. On peut imaginer le niveau de l’eau pour retrouver le sens de la formule.",
+    "anecdote": "Au musée Henri-Martin de Cahors, une toile de Tony Robert-Fleury montre les femmes autour d’un récipient. Présentée au Salon de 1873, cette peinture place le châtiment au premier plan du récit. La toile rejoint la collection de peinture du dix-neuvième siècle du musée.",
+    "reference": {
+      "label": "Musées Occitanie, « Les Danaïdes », notice de l’œuvre du musée Henri-Martin de Cahors",
+      "url": "https://musees-occitanie.fr/oeuvre/les-danaides/"
+    },
+    "sketch": {
+      "motif": "cycle",
+      "caption": "Une flèche qui revient sur elle-même figure le geste répété."
+    },
+    "aliases": [
+      "Danaïdes"
+    ],
+    "pageId": 99282,
+    "entity": "Q724907"
+  },
+  {
+    "title": "Montjuïc à Barcelone",
+    "domain": "Histoire",
+    "source": "personnel",
+    "intro": [
+      "Montjuïc est une colline de Barcelone qui domine le port et regarde la Méditerranée.",
+      "Ses fortifications, ses jardins et ses équipements sportifs racontent plusieurs usages successifs d’un même relief."
+    ],
+    "mecanisme": "La hauteur offre un poste d’observation sur les accès maritimes. Le château occupe la partie supérieure, tandis que les aménagements culturels et sportifs se répartissent sur les pentes et les replats reliés à la ville.",
+    "portee": "L’Exposition internationale de 1929 met en scène un autre visage de la colline, avec de nouveaux bâtiments et des jardins. Cette transformation donne aux visiteurs une raison de monter sur un site longtemps associé à la surveillance militaire.",
+    "posterite": "En 1992, les Jeux olympiques réinvestissent Montjuïc et font du stade l’un des centres de la compétition. Les installations rejoignent un ensemble déjà formé par le château, les espaces verts et les bâtiments issus de l’exposition.",
+    "anecdote": "Le stade de 1992 n’est pas né avec les Jeux. Construit en 1929, il accueille notamment les Jeux méditerranéens de 1955 avant sa rénovation olympique. Une seule enceinte permet ainsi de se rappeler trois dates de la colline.",
+    "reference": {
+      "label": "Comité international olympique, « Barcelona 1992: The Olympic Stadium », histoire du stade de Montjuïc",
+      "url": "https://www.olympics.com/ioc/news/barcelona-1992-the-olympic-stadium"
+    },
+    "sketch": {
+      "motif": "relief",
+      "caption": "Une colline au-dessus du port, coiffée d’un château."
+    },
+    "aliases": [
+      "Montjuïc"
+    ],
+    "pageId": 787922,
+    "entity": "Q1122701"
+  },
+  {
+    "title": "L’effet Stroop",
+    "domain": "Psychologie",
+    "source": "general",
+    "intro": [
+      "Imagine le mot ROUGE imprimé à l’encre bleue et essaie de nommer la couleur de l’encre.",
+      "L’effort supplémentaire ressenti dans cette situation illustre l’effet Stroop."
+    ],
+    "mecanisme": "Le mot active une réponse possible tandis que la couleur en exige une autre. Comme la lecture est bien entraînée chez l’adulte lettré, il faut sélectionner la réponse de couleur malgré l’information fournie par le mot.",
+    "portee": "Les chercheurs comparent notamment le temps nécessaire pour nommer une couleur quand le mot est compatible ou incompatible avec elle. Le surcroît de temps dans la situation de conflit aide à étudier la sélection de l’information pertinente.",
+    "posterite": "Le dispositif a inspiré des variantes avec des images et d’autres catégories de mots. Pour interpréter les résultats, on tient compte du niveau de lecture, de la vitesse de réponse et des conditions de passation.",
+    "anecdote": "Dans son article de 1935, John Ridley Stroop compare aussi les deux consignes inverses. La présence de mots gênait fortement la dénomination des couleurs, tandis que l’encre discordante ralentissait beaucoup moins la lecture des mots dans son expérience.",
+    "reference": {
+      "label": "J. Ridley Stroop, « Studies of interference in serial verbal reactions », Journal of Experimental Psychology, 1935",
+      "url": "https://doi.org/10.1037/H0054651"
+    },
+    "sketch": {
+      "motif": "branches",
+      "caption": "Deux chemins concurrents pour un même signal : lire et nommer."
+    },
+    "aliases": [
+      "Effet Stroop"
+    ],
+    "pageId": 976557,
+    "entity": "Q384176"
+  },
+  {
+    "title": "La dérive des continents",
+    "domain": "Sciences",
+    "source": "general",
+    "intro": [
+      "Au début du vingtième siècle, Alfred Wegener propose que les continents aient changé de position au cours du temps.",
+      "Leur séparation actuelle aurait suivi la fragmentation d’un ancien ensemble, la Pangée."
+    ],
+    "mecanisme": "Wegener rapproche les contours des continents et compare les fossiles et les terrains situés de part et d’autre des océans. Une ressemblance isolée pourrait être fortuite, mais plusieurs indices indépendants deviennent cohérents si les terres ont été réunies.",
+    "portee": "Son hypothèse explique pourquoi des espèces anciennes semblables sont retrouvées sur des rives désormais éloignées. Elle pose aussi une question physique à laquelle Wegener n’apporte pas de réponse convaincante pour ses contemporains : quelle force déplace les continents ?",
+    "posterite": "La tectonique des plaques reprend l’idée du déplacement en la reliant à l’ouverture et à la fermeture des océans. Les continents sont entraînés par des plaques qui comprennent aussi, pour certaines, une partie du plancher océanique.",
+    "anecdote": "Les fossiles du petit reptile aquatique Mesosaurus sont connus en Amérique du Sud et en Afrique australe. Leur répartition se comprend mieux quand on rapproche ces terres que si on imagine une traversée de l’Atlantique actuel.",
+    "reference": {
+      "label": "US Geological Survey, « Wegener’s Puzzling Continental Drift Evidence », carte des indices fossiles",
+      "url": "https://www.usgs.gov/educational-resources/wegeners-puzzling-continental-drift-evidence"
+    },
+    "sketch": {
+      "motif": "trajectoire",
+      "caption": "Deux rivages séparés, reliés par une flèche qui rappelle le mouvement."
+    },
+    "aliases": [
+      "Dérive des continents"
+    ],
+    "pageId": 101006,
+    "entity": "Q178605"
+  }
+]

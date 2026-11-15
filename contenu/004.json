@@ -1,12 +1,24 @@
 {
   "number": 4,
   "date": "2026-11-15",
-  "title": "Tour Eiffel",
   "pageId": 1359783,
-  "revision": 241075004,
-  "paragraphs": [
-    "La tour Eiffel [tuʁɛfɛl]  est une tour autoportante de fer puddlé de 330 m de hauteur (avec antennes) située à Paris, à l’extrémité nord-ouest du parc du Champ-de-Mars en bordure de la Seine dans le 7e arrondissement. Son adresse officielle est 5, avenue Anatole-France.",
-    "Construite en deux ans par Gustave Eiffel et ses collaborateurs pour l'Exposition universelle de Paris de 1889, célébrant le centenaire de la Révolution française, et initialement nommée « tour de 300 mètres », elle est devenue le symbole de la capitale française et un site touristique de premier plan : il s’agit du quatrième site culturel français payant le plus visité en 2016, avec 5,9 millions de visiteurs. Depuis son ouverture au public, elle a accueilli plus de 300 millions de visiteurs.",
-    "D’une hauteur de 312 mètres à l’origine, la tour Eiffel est restée le monument le plus élevé du monde pendant quarante ans. Le second niveau du troisième étage, appelé parfois quatrième étage, situé à 279,11 mètres, est la plus haute plateforme d'observation accessible au public de l'Union européenne et la deuxième plus haute d'Europe, derrière la tour Ostankino à Moscou culminant à 337 mètres."
-  ]
+  "title": "Tour Eiffel",
+  "domain": "Architecture",
+  "source": "general",
+  "intro": [
+    "La tour Eiffel est achevée en 1889 pour l’Exposition universelle de Paris.",
+    "Conçue pour une concession de vingt ans, elle trouve une nouvelle utilité avec les transmissions sans fil."
+  ],
+  "mecanisme": "Sa silhouette vient du rapprochement progressif des quatre piliers. Une ossature métallique ajourée laisse passer l’air et transmet les efforts vers les fondations, tandis que les principales plateformes interrompent visuellement la montée des grandes courbes.",
+  "portee": "La hauteur offre un emplacement favorable pour les antennes de télégraphie. Au début du vingtième siècle, Gustave Eiffel encourage les essais dirigés par le militaire Gustave Ferrié, à mesure que la portée des liaisons augmente.",
+  "posterite": "La tour devient progressivement une infrastructure de communication, en plus de son rôle de monument. La radio, puis la télévision, prolongent cette fonction et ajoutent de nouveaux équipements au sommet de la structure initiale.",
+  "anecdote": "En 1898, Eugène Ducretet expérimente une liaison sans fil entre la tour Eiffel et le Panthéon. Les signaux parcourent environ quatre kilomètres au-dessus de Paris, bien avant que la voix ne devienne familière à la radio.",
+  "reference": {
+    "label": "Société d’exploitation de la tour Eiffel, « La tour Eiffel et les sciences », histoire des transmissions",
+    "url": "https://www.toureiffel.paris/fr/le-monument/tour-eiffel-et-sciences"
+  },
+  "sketch": {
+    "motif": "tour",
+    "caption": "Deux jambes convergent vers une antenne et ses ondes."
+  }
 }

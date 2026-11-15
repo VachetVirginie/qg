@@ -56,8 +56,6 @@ time { color: var(--muted); font-size: .9rem; }
   .display-break { display: none; }
 }
 
-@page { size: A5 portrait; margin: 12mm; }
-
 @media print {
   :root, .sheet { background: white; color: black; }
   .shell { width: auto; margin: 0; padding: 0; }
@@ -67,4 +65,108 @@ time { color: var(--muted); font-size: .9rem; }
   .reading { font-size: 11pt; }
   .source { font-size: 8pt; }
   .reading p { orphans: 2; widows: 2; }
+}
+
+.carnet-tools[hidden] { display: none; }
+.carnet-tools { margin-top: .5rem; }
+.carnet-tools button {
+  min-height: 2.75rem;
+  padding: .4rem .75rem;
+  border: 1px solid var(--accent);
+  border-radius: .35rem;
+  background: var(--card, #fffdf8);
+  color: var(--accent);
+  font: inherit;
+  font-size: .85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.theme-switch button:first-child { border-start-end-radius: 0; border-end-end-radius: 0; }
+.theme-switch button:last-child { border-start-start-radius: 0; border-end-start-radius: 0; }
+.theme-switch button + button { border-inline-start: 0; }
+.carnet-tools button[aria-pressed="true"],
+.carnet-tools [data-print] { background: var(--accent); color: var(--paper); }
+.carnet-tools button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.carnet-reader { max-width: 148mm; }
+.carnet { background: var(--card, #fffdf8); padding: clamp(.8rem, 5vw, 1.8rem); }
+.carnet-title { margin-block-end: 1rem; }
+.carnet-title h1 { font-size: clamp(2.2rem, 7vw, 3.5rem); }
+.carnet-meta { color: var(--muted); font-size: .84rem; margin-top: .45rem; }
+.bento { grid-template-columns: minmax(0, 1fr); align-items: stretch; }
+.tile {
+  padding: .85rem;
+  border: 1px solid var(--line);
+  border-radius: .55rem;
+  background: var(--tile, #faf3e6);
+  overflow-wrap: anywhere;
+}
+.tile h2, .sketch strong {
+  margin-bottom: .45rem;
+  font: 700 1.27rem/1.1 var(--serif);
+  color: var(--accent);
+}
+.tile p, .tile li { font-size: .92rem; line-height: 1.48; }
+.tile ol { margin: 0; padding-left: 1.15em; }
+.tile li + li { margin-top: .45em; }
+.lead { background: var(--highlight, #f3e5ce); }
+.lead .event { margin-top: .45em; font-size: .82rem; }
+.sketch { margin: 0; display: flex; flex-direction: column; justify-content: space-between; color: var(--accent); }
+.sketch figcaption { display: grid; gap: .1rem; }
+.sketch figcaption span { color: var(--ink); font-size: .83rem; }
+.sketch svg { display: block; width: min(100%, 8rem); margin: .65rem auto 0; }
+.reference { background: transparent; }
+[data-dot-grid] .carnet {
+  background-image: radial-gradient(circle, var(--dots, #a58862) .42px, transparent .65px);
+  background-size: 5mm 5mm;
+}
+[data-dot-grid] .tile { background-color: transparent; }
+[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #181613;
+  --ink: #f2e7d3;
+  --muted: #ccbaa0;
+  --accent: #f2c582;
+  --line: #695741;
+  --card: #201b16;
+  --tile: #282019;
+  --highlight: #32261a;
+  --dots: #9a7c58;
+}
+[data-theme="dark"] :focus-visible { outline-color: var(--accent); }
+
+@media (min-width: 32rem) {
+  .bento { grid-template-columns: minmax(0, 2.15fr) minmax(0, 1fr); }
+  .lead, .anecdote, .reference { grid-column: 1 / -1; }
+}
+
+@page { size: 148mm 210mm; margin: 7mm; }
+
+@media print {
+  :root[data-theme], :root {
+    color-scheme: light;
+    --paper: white;
+    --ink: #231e19;
+    --muted: #554337;
+    --accent: #653e1a;
+    --line: #c2ab8d;
+    --card: white;
+    --tile: white;
+    --highlight: white;
+    --dots: #aa967f;
+  }
+  .carnet-tools { display: none !important; }
+  .carnet-reader { max-width: none; }
+  .carnet { color: var(--ink); padding: 0; }
+  .carnet-title { margin-bottom: 3mm; }
+  .carnet-title .eyebrow { margin-bottom: 2mm; }
+  .carnet-title h1 { font-size: 24pt; }
+  .carnet-meta { font-size: 8pt; }
+  .bento { grid-template-columns: minmax(0, 3fr) minmax(0, 1fr); gap: 1.75mm; }
+  .lead, .anecdote, .reference { grid-column: 1 / -1; }
+  .tile { padding: 2mm; break-inside: avoid; border-radius: 1.5mm; }
+  .tile h2, .sketch strong { font-size: 12pt; margin-bottom: 1.25mm; }
+  .tile p, .tile li, .sketch figcaption span { font-size: 9.25pt; line-height: 1.32; }
+  .tile .event, .tile .event time { font-size: 8pt; }
+  .sketch svg { max-width: 24mm; }
+  [data-dot-grid] .carnet { print-color-adjust: exact; }
 }

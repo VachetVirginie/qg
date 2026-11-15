@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       subject:
-        description: 'Sujet à publier tout de suite (laisser vide pour suivre la liste d’attente)'
+        description: 'Sujet à publier tout de suite (laisser vide pour le tirage éditorial)'
         required: false
         type: string
 
@@ -31,20 +31,26 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - uses: pnpm/action-setup@v4
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
       - name: Préparer les fiches
         env:
           EVENT: ${{ github.event_name }}
           SUBJECT: ${{ inputs.subject }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
         run: |
           if [ "$EVENT" = push ]; then
-            node scripts/qg.mjs
+            pnpm build
           else
             node scripts/qg.mjs --daily --subject "$SUBJECT"
+            pnpm exec tailwindcss -i carnet.tailwind.css -o tailwind.css --minify
           fi
       - name: Enregistrer le catalogue et les fiches dans le dépôt
         if: github.event_name != 'push'
         run: |
-          git add contenu fiches index.html sujets.txt
+          git add contenu fiches index.html
           if ! git diff --cached --quiet; then
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
@@ -54,7 +60,7 @@ jobs:
       - name: Préparer les fichiers publics
         run: |
           mkdir _site
-          cp index.html style.css _site/
+          cp index.html style.css tailwind.css carnet.js _site/
           cp -R fiches _site/
       - uses: actions/upload-pages-artifact@v4
         with:

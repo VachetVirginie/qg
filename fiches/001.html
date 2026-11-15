@@ -3,29 +3,55 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Fiche de culture générale sur Machine de Turing, à lire ou à imprimer au format A5.">
-  <title>Fiche #001 — Machine de Turing | QG</title>
+  <meta name="description" content="Fiche de culture générale sur Machine de Turing, au format A5.">
+  <title>Fiche #01 — Machine de Turing | QG</title>
+  <link rel="stylesheet" href="../tailwind.css">
+  <script src="../carnet.js" defer></script>
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-<main class="shell reader">
+<main class="shell reader carnet-reader">
   <nav aria-label="Collection"><a class="back" href="../">← Toutes les fiches</a></nav>
-  <article class="sheet">
-    <header>
-      <p class="eyebrow">QG · Fiche #001</p>
-      <h1>Machine de Turing</h1>
-      <p class="feature-date"><time datetime="2026-11-15">15 novembre 2026</time></p>
-    </header>
-    <div class="reading">
-      <p>En informatique théorique, une machine de Turing est un modèle abstrait du fonctionnement des appareils mécaniques de calcul, tel un ordinateur. Ce modèle a été imaginé par Alan Turing en 1936, en vue de donner une définition précise au concept d’algorithme ou de « procédure mécanique ».</p>
-      <p>Il est toujours largement utilisé en informatique théorique, en particulier dans les domaines de la complexité algorithmique et de la calculabilité.</p>
-      <p>À l&#39;origine, le concept de machine de Turing, inventé avant l&#39;ordinateur, était censé représenter une personne virtuelle exécutant une procédure bien définie, en changeant le contenu des cases d&#39;un ruban infini, en choisissant ce contenu parmi un ensemble fini de symboles. D&#39;autre part, à chaque étape de la procédure, la personne doit se placer dans un état particulier parmi un ensemble fini d&#39;états. La procédure est formulée en termes d&#39;étapes élémentaires du type : « si vous êtes dans l&#39;état 42 et que le symbole contenu sur la case que vous regardez est « 0 », alors remplacer ce symbole par un « 1 », passer dans l&#39;état 17, et regarder maintenant la case adjacente à droite ».</p>
-      <p>La thèse de Church postule que tout problème de calcul fondé sur une procédure algorithmique peut être résolu par une machine de Turing.</p>
+  <div class="carnet-tools flex flex-wrap items-center gap-2" hidden>
+    <div class="theme-switch flex flex-wrap" role="group" aria-label="Thème de la fiche">
+      <button type="button" data-theme-choice="paper" aria-pressed="true">Papier carnet</button>
+      <button type="button" data-theme-choice="dark" aria-pressed="false">Mode sombre</button>
     </div>
-    <footer class="source">
-      <p>Source · <a href="https://fr.wikipedia.org/w/index.php?oldid=241203484">« Machine de Turing » sur Wikipédia</a></p>
-      <p>Texte des contributeurs de Wikipédia, abrégé pour cette fiche. Licence <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">CC BY-SA 4.0</a>.</p>
-    </footer>
+    <button type="button" data-grid-toggle aria-pressed="false">Grille 5 mm</button>
+    <button type="button" data-print>Exporter en PDF A5</button>
+  </div>
+  <article class="sheet carnet">
+    <header class="carnet-title">
+      <p class="eyebrow">Fiche #01 · Sciences</p>
+      <h1>Machine de Turing</h1>
+      <p class="carnet-meta">Culture générale · 188 mots</p>
+    </header>
+    <div class="bento grid gap-3">
+      <section class="tile lead">
+        <h2>L’essentiel en bref</h2>
+        <p>En 1936, Alan Turing imagine une machine abstraite pour définir ce que signifie calculer. Elle permet de comprendre aussi bien la puissance des ordinateurs que certaines de leurs limites.</p>
+      </section>
+      <section class="tile key-points min-w-0">
+        <h2>Les 3 points clés</h2>
+        <ol>
+          <li><strong>Mécanisme.</strong> Un ruban est divisé en cases, chacune portant un symbole ou laissée vide. Une tête lit la case courante, puis une règle lui indique quel symbole écrire, où se déplacer et dans quel état poursuivre le calcul.</li>
+          <li><strong>Portée.</strong> Une même machine, dite universelle, peut simuler les autres si son ruban contient leur description et les données à traiter. Cette idée sépare le dispositif qui exécute les instructions du programme qui détermine son comportement.</li>
+          <li><strong>Postérité.</strong> Le modèle sert encore à étudier quels problèmes admettent une procédure de résolution. Il montre aussi pourquoi aucune méthode générale ne peut décider, pour chaque programme et chaque entrée imaginable, si le calcul finira par s’arrêter.</li>
+        </ol>
+      </section>
+      <figure class="tile sketch min-w-0">
+        <figcaption><strong>Croquis mémo</strong><span>Un ruban de cases et une flèche indiquant la tête de lecture.</span></figcaption>
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 80 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 23h60v22H10zm15 0v22m15-22v22m15-22v22M40 9v10m-4-4 4 4 4-4"/></svg>
+      </figure>
+      <section class="tile anecdote">
+        <h2>L’anecdote à retenir</h2>
+        <p>Le ruban peut être prolongé autant que nécessaire, mais une étape ne concerne qu’une seule case. Cette contrainte minuscule suffit à décrire un calcul complexe, à condition de donner à la machine le temps et la place nécessaires.</p>
+      </section>
+      <section class="tile reference">
+        <h2>Pour aller plus loin</h2>
+        <p><a href="https://plato.stanford.edu/archives/fall2006/entries/computability/">Stanford Encyclopedia of Philosophy, « Computability and Complexity », section sur les machines de Turing</a></p>
+      </section>
+    </div>
   </article>
 </main>
 </body>

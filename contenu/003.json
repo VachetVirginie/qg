@@ -1,11 +1,24 @@
 {
   "number": 3,
   "date": "2026-11-15",
-  "title": "Parc national de Yellowstone",
   "pageId": 89572,
-  "revision": 240324896,
-  "paragraphs": [
-    "Le parc national de Yellowstone (en anglais : Yellowstone National Park) est un parc national des États-Unis, ainsi qu'un site du patrimoine mondial protégé par l'UNESCO, à cheval sur trois États : au nord-ouest du Wyoming (pour 96 % de sa surface) et, marginalement, au sud-est de l'Idaho (en bordure de la forêt nationale de Caribou-Targhee) et au sud-ouest du Montana (adjacent à la forêt nationale de Gallatin). Créé le 1er mars 1872 par le président républicain Ulysses S. Grant, Yellowstone est le plus ancien parc national du monde. Il s'étend sur 8 983 km2 (898 300 hectares), soit une superficie à peine moins importante que celle du département de la Dordogne.",
-    "Il constitue le deuxième plus grand parc naturel des États-Unis (à l'exception de ceux localisés en Alaska). La caldeira de Yellowstone est célèbre pour ses phénomènes géothermiques ; elle contient deux tiers des geysers de la planète et de nombreuses sources chaudes. L'une des figures emblématiques du parc est le geyser Old Faithful. Le parc abrite aussi de nombreux grands mammifères, comme des ours noirs, des grizzlys, des coyotes, des loups, des orignaux, des cerfs ou encore des troupeaux sauvages de bisons et de wapitis."
-  ]
+  "title": "Parc national de Yellowstone",
+  "domain": "Sciences",
+  "source": "general",
+  "intro": [
+    "Yellowstone protège un territoire où la chaleur du sous-sol se manifeste en surface.",
+    "Ses geysers rendent visible la circulation de l’eau dans les fractures de la roche."
+  ],
+  "mecanisme": "L’eau s’infiltre, se réchauffe en profondeur et remonte dans des conduits. Si un passage étroit freine l’évacuation de la chaleur, la pression augmente et une partie de l’eau se transforme brusquement en vapeur, qui expulse l’eau vers la surface.",
+  "portee": "Sources chaudes et geysers n’obéissent donc pas au même rythme. Un geyser doit retrouver des conditions favorables de température, d’alimentation et de pression avant de produire une nouvelle éruption, dont le délai varie selon la plomberie souterraine.",
+  "posterite": "Le parc est créé par une loi des États-Unis le premier mars 1872. Sa protection marque une étape dans l’histoire des parcs nationaux, sur un territoire où des peuples autochtones vivaient et circulaient bien avant cette décision.",
+  "anecdote": "Old Faithful n’entre pas en éruption exactement toutes les heures. Les agents du parc estiment le prochain départ en observant la durée de la précédente éruption, selon une relation mesurée sur place. La durée compte davantage que l’heure indiquée par une montre.",
+  "reference": {
+    "label": "National Park Service, « Predicting Geysers », centre d’interprétation d’Old Faithful",
+    "url": "https://www.nps.gov/features/yell/ofvec/exhibits/eruption/prediction/predict7.htm"
+  },
+  "sketch": {
+    "motif": "couches",
+    "caption": "Trois strates pour la roche, les eaux profondes et la surface."
+  }
 }

@@ -1,13 +1,24 @@
 {
   "number": 1,
   "date": "2026-11-15",
-  "title": "Machine de Turing",
   "pageId": 54894,
-  "revision": 241203484,
-  "paragraphs": [
-    "En informatique théorique, une machine de Turing est un modèle abstrait du fonctionnement des appareils mécaniques de calcul, tel un ordinateur. Ce modèle a été imaginé par Alan Turing en 1936, en vue de donner une définition précise au concept d’algorithme ou de « procédure mécanique ».",
-    "Il est toujours largement utilisé en informatique théorique, en particulier dans les domaines de la complexité algorithmique et de la calculabilité.",
-    "À l'origine, le concept de machine de Turing, inventé avant l'ordinateur, était censé représenter une personne virtuelle exécutant une procédure bien définie, en changeant le contenu des cases d'un ruban infini, en choisissant ce contenu parmi un ensemble fini de symboles. D'autre part, à chaque étape de la procédure, la personne doit se placer dans un état particulier parmi un ensemble fini d'états. La procédure est formulée en termes d'étapes élémentaires du type : « si vous êtes dans l'état 42 et que le symbole contenu sur la case que vous regardez est « 0 », alors remplacer ce symbole par un « 1 », passer dans l'état 17, et regarder maintenant la case adjacente à droite ».",
-    "La thèse de Church postule que tout problème de calcul fondé sur une procédure algorithmique peut être résolu par une machine de Turing."
-  ]
+  "title": "Machine de Turing",
+  "domain": "Sciences",
+  "source": "general",
+  "intro": [
+    "En 1936, Alan Turing imagine une machine abstraite pour définir ce que signifie calculer.",
+    "Elle permet de comprendre aussi bien la puissance des ordinateurs que certaines de leurs limites."
+  ],
+  "mecanisme": "Un ruban est divisé en cases, chacune portant un symbole ou laissée vide. Une tête lit la case courante, puis une règle lui indique quel symbole écrire, où se déplacer et dans quel état poursuivre le calcul.",
+  "portee": "Une même machine, dite universelle, peut simuler les autres si son ruban contient leur description et les données à traiter. Cette idée sépare le dispositif qui exécute les instructions du programme qui détermine son comportement.",
+  "posterite": "Le modèle sert encore à étudier quels problèmes admettent une procédure de résolution. Il montre aussi pourquoi aucune méthode générale ne peut décider, pour chaque programme et chaque entrée imaginable, si le calcul finira par s’arrêter.",
+  "anecdote": "Le ruban peut être prolongé autant que nécessaire, mais une étape ne concerne qu’une seule case. Cette contrainte minuscule suffit à décrire un calcul complexe, à condition de donner à la machine le temps et la place nécessaires.",
+  "reference": {
+    "label": "Stanford Encyclopedia of Philosophy, « Computability and Complexity », section sur les machines de Turing",
+    "url": "https://plato.stanford.edu/archives/fall2006/entries/computability/"
+  },
+  "sketch": {
+    "motif": "grille",
+    "caption": "Un ruban de cases et une flèche indiquant la tête de lecture."
+  }
 }

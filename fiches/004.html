@@ -3,28 +3,55 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Fiche de culture générale sur Tour Eiffel, à lire ou à imprimer au format A5.">
-  <title>Fiche #004 — Tour Eiffel | QG</title>
+  <meta name="description" content="Fiche de culture générale sur Tour Eiffel, au format A5.">
+  <title>Fiche #04 — Tour Eiffel | QG</title>
+  <link rel="stylesheet" href="../tailwind.css">
+  <script src="../carnet.js" defer></script>
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-<main class="shell reader">
+<main class="shell reader carnet-reader">
   <nav aria-label="Collection"><a class="back" href="../">← Toutes les fiches</a></nav>
-  <article class="sheet">
-    <header>
-      <p class="eyebrow">QG · Fiche #004</p>
-      <h1>Tour Eiffel</h1>
-      <p class="feature-date"><time datetime="2026-11-15">15 novembre 2026</time></p>
-    </header>
-    <div class="reading">
-      <p>La tour Eiffel [tuʁɛfɛl]  est une tour autoportante de fer puddlé de 330 m de hauteur (avec antennes) située à Paris, à l’extrémité nord-ouest du parc du Champ-de-Mars en bordure de la Seine dans le 7e arrondissement. Son adresse officielle est 5, avenue Anatole-France.</p>
-      <p>Construite en deux ans par Gustave Eiffel et ses collaborateurs pour l&#39;Exposition universelle de Paris de 1889, célébrant le centenaire de la Révolution française, et initialement nommée « tour de 300 mètres », elle est devenue le symbole de la capitale française et un site touristique de premier plan : il s’agit du quatrième site culturel français payant le plus visité en 2016, avec 5,9 millions de visiteurs. Depuis son ouverture au public, elle a accueilli plus de 300 millions de visiteurs.</p>
-      <p>D’une hauteur de 312 mètres à l’origine, la tour Eiffel est restée le monument le plus élevé du monde pendant quarante ans. Le second niveau du troisième étage, appelé parfois quatrième étage, situé à 279,11 mètres, est la plus haute plateforme d&#39;observation accessible au public de l&#39;Union européenne et la deuxième plus haute d&#39;Europe, derrière la tour Ostankino à Moscou culminant à 337 mètres.</p>
+  <div class="carnet-tools flex flex-wrap items-center gap-2" hidden>
+    <div class="theme-switch flex flex-wrap" role="group" aria-label="Thème de la fiche">
+      <button type="button" data-theme-choice="paper" aria-pressed="true">Papier carnet</button>
+      <button type="button" data-theme-choice="dark" aria-pressed="false">Mode sombre</button>
     </div>
-    <footer class="source">
-      <p>Source · <a href="https://fr.wikipedia.org/w/index.php?oldid=241075004">« Tour Eiffel » sur Wikipédia</a></p>
-      <p>Texte des contributeurs de Wikipédia, abrégé pour cette fiche. Licence <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">CC BY-SA 4.0</a>.</p>
-    </footer>
+    <button type="button" data-grid-toggle aria-pressed="false">Grille 5 mm</button>
+    <button type="button" data-print>Exporter en PDF A5</button>
+  </div>
+  <article class="sheet carnet">
+    <header class="carnet-title">
+      <p class="eyebrow">Fiche #04 · Architecture</p>
+      <h1>Tour Eiffel</h1>
+      <p class="carnet-meta">Culture générale · 185 mots</p>
+    </header>
+    <div class="bento grid gap-3">
+      <section class="tile lead">
+        <h2>L’essentiel en bref</h2>
+        <p>La tour Eiffel est achevée en 1889 pour l’Exposition universelle de Paris. Conçue pour une concession de vingt ans, elle trouve une nouvelle utilité avec les transmissions sans fil.</p>
+      </section>
+      <section class="tile key-points min-w-0">
+        <h2>Les 3 points clés</h2>
+        <ol>
+          <li><strong>Mécanisme.</strong> Sa silhouette vient du rapprochement progressif des quatre piliers. Une ossature métallique ajourée laisse passer l’air et transmet les efforts vers les fondations, tandis que les principales plateformes interrompent visuellement la montée des grandes courbes.</li>
+          <li><strong>Portée.</strong> La hauteur offre un emplacement favorable pour les antennes de télégraphie. Au début du vingtième siècle, Gustave Eiffel encourage les essais dirigés par le militaire Gustave Ferrié, à mesure que la portée des liaisons augmente.</li>
+          <li><strong>Postérité.</strong> La tour devient progressivement une infrastructure de communication, en plus de son rôle de monument. La radio, puis la télévision, prolongent cette fonction et ajoutent de nouveaux équipements au sommet de la structure initiale.</li>
+        </ol>
+      </section>
+      <figure class="tile sketch min-w-0">
+        <figcaption><strong>Croquis mémo</strong><span>Deux jambes convergent vers une antenne et ses ondes.</span></figcaption>
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 80 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M40 7 19 54m21-47 21 47M29 36h22M24 47h32M13 54h54M36 13a8 8 0 0 0-7 5m15-5a8 8 0 0 1 7 5"/></svg>
+      </figure>
+      <section class="tile anecdote">
+        <h2>L’anecdote à retenir</h2>
+        <p>En 1898, Eugène Ducretet expérimente une liaison sans fil entre la tour Eiffel et le Panthéon. Les signaux parcourent environ quatre kilomètres au-dessus de Paris, bien avant que la voix ne devienne familière à la radio.</p>
+      </section>
+      <section class="tile reference">
+        <h2>Pour aller plus loin</h2>
+        <p><a href="https://www.toureiffel.paris/fr/le-monument/tour-eiffel-et-sciences">Société d’exploitation de la tour Eiffel, « La tour Eiffel et les sciences », histoire des transmissions</a></p>
+      </section>
+    </div>
   </article>
 </main>
 </body>

@@ -3,28 +3,55 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Fiche de culture générale sur Tapisserie de Bayeux, à lire ou à imprimer au format A5.">
-  <title>Fiche #002 — Tapisserie de Bayeux | QG</title>
+  <meta name="description" content="Fiche de culture générale sur Tapisserie de Bayeux, au format A5.">
+  <title>Fiche #02 — Tapisserie de Bayeux | QG</title>
+  <link rel="stylesheet" href="../tailwind.css">
+  <script src="../carnet.js" defer></script>
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-<main class="shell reader">
+<main class="shell reader carnet-reader">
   <nav aria-label="Collection"><a class="back" href="../">← Toutes les fiches</a></nav>
-  <article class="sheet">
-    <header>
-      <p class="eyebrow">QG · Fiche #002</p>
-      <h1>Tapisserie de Bayeux</h1>
-      <p class="feature-date"><time datetime="2026-11-15">15 novembre 2026</time></p>
-    </header>
-    <div class="reading">
-      <p>La tapisserie de Bayeux ou broderie de Bayeux, successivement désignée « Telle du Conquest » (« toile de la Conquête ») par les chanoines de la cathédrale Notre-Dame de Bayeux, toilette de la Saint-Jean et toilette du duc Guillaume au XVIIIe siècle, ou encore tapisserie de la reine Mathilde au XIXe siècle, est une broderie (anciennement « tapisserie aux points d&#39;aiguille ») du XIe siècle inscrite depuis 2007 au registre international Mémoire du monde par l&#39;Unesco.</p>
-      <p>Œuvre d&#39;art textile effectuée à l&#39;aiguille sur une toile de lin bis assez régulière, brodée avec quatre points différents de fils de laine déclinés en dix teintes naturelles, elle expose 623 personnages, 994 animaux, 438 végétaux, 37 forteresses et bâtiments, 41 navires et petites embarcations, et d&#39;innombrables objets très divers. Elle décrit des faits allant de la fin du règne du roi d&#39;Angleterre Édouard le Confesseur en 1064 à la bataille d&#39;Hastings en 1066, dont l&#39;enjeu était le trône d&#39;Angleterre, contesté à Harold Godwinson par Guillaume, duc de Normandie.</p>
-      <p>Les péripéties-clés de la bataille, dont l&#39;issue détermina la conquête normande de l&#39;Angleterre, y sont détaillées, mais près de la moitié des scènes relatent en fait des épisodes antérieurs à l&#39;invasion elle-même.</p>
+  <div class="carnet-tools flex flex-wrap items-center gap-2" hidden>
+    <div class="theme-switch flex flex-wrap" role="group" aria-label="Thème de la fiche">
+      <button type="button" data-theme-choice="paper" aria-pressed="true">Papier carnet</button>
+      <button type="button" data-theme-choice="dark" aria-pressed="false">Mode sombre</button>
     </div>
-    <footer class="source">
-      <p>Source · <a href="https://fr.wikipedia.org/w/index.php?oldid=240246812">« Tapisserie de Bayeux » sur Wikipédia</a></p>
-      <p>Texte des contributeurs de Wikipédia, abrégé pour cette fiche. Licence <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">CC BY-SA 4.0</a>.</p>
-    </footer>
+    <button type="button" data-grid-toggle aria-pressed="false">Grille 5 mm</button>
+    <button type="button" data-print>Exporter en PDF A5</button>
+  </div>
+  <article class="sheet carnet">
+    <header class="carnet-title">
+      <p class="eyebrow">Fiche #02 · Histoire</p>
+      <h1>Tapisserie de Bayeux</h1>
+      <p class="carnet-meta">Culture générale · 188 mots</p>
+    </header>
+    <div class="bento grid gap-3">
+      <section class="tile lead">
+        <h2>L’essentiel en bref</h2>
+        <p>La Tapisserie de Bayeux raconte comment Guillaume de Normandie s’empare du trône anglais en 1066. Sur près de soixante-dix mètres, des images brodées et des inscriptions latines font avancer le récit.</p>
+      </section>
+      <section class="tile key-points min-w-0">
+        <h2>Les 3 points clés</h2>
+        <ol>
+          <li><strong>Mécanisme.</strong> Des fils de laine dessinent les figures sur plusieurs pièces de lin assemblées. Les scènes se suivent en frise, tandis que les bordures accueillent des animaux et d’autres motifs qui accompagnent parfois l’action centrale.</li>
+          <li><strong>Portée.</strong> Le récit donne une place importante à Harold, rival de Guillaume, et conduit à la bataille d’Hastings. Les choix de représentation invitent à lire l’œuvre comme un récit construit de la conquête, avec ses ellipses et ses points de vue.</li>
+          <li><strong>Postérité.</strong> La broderie documente les gestes, l’équipement militaire et les navires du Moyen Âge. Le panorama numérique permet de suivre les détails difficiles à voir en réduction. L’exploration numérique facilite aussi la comparaison des bordures.</li>
+        </ol>
+      </section>
+      <figure class="tile sketch min-w-0">
+        <figcaption><strong>Croquis mémo</strong><span>Un ruban découpé en cases pour représenter les scènes brodées.</span></figcaption>
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 80 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 23h60v22H10zm15 0v22m15-22v22m15-22v22M40 9v10m-4-4 4 4 4-4"/></svg>
+      </figure>
+      <section class="tile anecdote">
+        <h2>L’anecdote à retenir</h2>
+        <p>Des personnages lèvent le doigt vers une comète en 1066. Identifiée à celle de Halley, elle marque un moment de tension dans le récit, après le couronnement de Harold et avant la traversée de Guillaume.</p>
+      </section>
+      <section class="tile reference">
+        <h2>Pour aller plus loin</h2>
+        <p><a href="https://www.bayeuxmuseum.com/la-tapisserie-de-bayeux/decouvrir-la-tapisserie-de-bayeux/explorer-la-tapisserie-de-bayeux-en-ligne/">Bayeux Museum, « Explorer la Tapisserie de Bayeux en ligne », scène de la comète</a></p>
+      </section>
+    </div>
   </article>
 </main>
 </body>

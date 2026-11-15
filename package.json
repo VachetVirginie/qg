@@ -1,0 +1,14 @@
+{
+  "name": "carnets-qg",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.13.1",
+  "scripts": {
+    "build": "node scripts/qg.mjs && tailwindcss -i carnet.tailwind.css -o tailwind.css --minify",
+    "test": "node --test scripts/*.test.mjs"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "~4.3.5",
+    "tailwindcss": "~4.3.5"
+  }
+}

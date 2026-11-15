@@ -1,0 +1,34 @@
+{
+  "number": 5,
+  "date": "2026-11-15",
+  "title": "Les lentilles gravitationnelles",
+  "domain": "Sciences",
+  "source": "actualite",
+  "aliases": [
+    "Lentille gravitationnelle",
+    "Effet de lentille gravitationnelle"
+  ],
+  "intro": [
+    "Une galaxie massive peut dévier la lumière d’une galaxie plus lointaine, comme une lentille à l’échelle du cosmos.",
+    "Le nouveau catalogue du télescope Euclid permet d’observer ce phénomène dans des configurations très variées."
+  ],
+  "mecanisme": "La matière courbe l’espace-temps, ce qui modifie la trajectoire que suit la lumière. Si une galaxie massive se trouve entre la source lumineuse et nous, plusieurs trajets peuvent donner plusieurs images de cette même source.",
+  "portee": "La forme et la position des images renseignent sur la masse de la galaxie intermédiaire, y compris la matière qui n’émet pas de lumière. La lentille peut aussi amplifier des objets trop faibles pour être vus autrement.",
+  "posterite": "Le premier grand lot de données d’Euclid contient environ quinze mille lentilles fortes candidates. Le mot « candidates » compte : leur identification doit être consolidée, puis les cas confirmés permettront d’étudier ces systèmes comme une population.",
+  "anecdote": "Dans certains systèmes repérés par Euclid, une seule galaxie au premier plan déforme la lumière de plusieurs galaxies situées derrière elle, à des distances différentes. Un même obstacle apparent offre ainsi plusieurs vues sur l’Univers lointain.",
+  "reference": {
+    "label": "Agence spatiale européenne, « Explore Euclid’s largest-ever catalogue of cosmic lenses », vidéo commentée",
+    "url": "https://www.esa.int/media/about-us/directorates/science/euclid/explore-euclid-s-largest-ever-catalogue-of-cosmic-lenses"
+  },
+  "sketch": {
+    "motif": "lentille",
+    "caption": "Deux rayons contournent la masse et rejoignent l’observateur."
+  },
+  "event": {
+    "title": "Publication du lot de données Euclid DR1-Foundation",
+    "url": "https://www.esa.int/articles/about-us/directorates/science/euclid/euclid-lays-the-foundation-for-its-best-ever-3d-map-of-the-universe",
+    "date": "2026-11-12"
+  },
+  "pageId": 1434209,
+  "entity": "Q185243"
+}

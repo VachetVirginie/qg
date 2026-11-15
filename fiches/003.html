@@ -3,27 +3,55 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Fiche de culture générale sur Parc national de Yellowstone, à lire ou à imprimer au format A5.">
-  <title>Fiche #003 — Parc national de Yellowstone | QG</title>
+  <meta name="description" content="Fiche de culture générale sur Parc national de Yellowstone, au format A5.">
+  <title>Fiche #03 — Parc national de Yellowstone | QG</title>
+  <link rel="stylesheet" href="../tailwind.css">
+  <script src="../carnet.js" defer></script>
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-<main class="shell reader">
+<main class="shell reader carnet-reader">
   <nav aria-label="Collection"><a class="back" href="../">← Toutes les fiches</a></nav>
-  <article class="sheet">
-    <header>
-      <p class="eyebrow">QG · Fiche #003</p>
-      <h1>Parc national de Yellowstone</h1>
-      <p class="feature-date"><time datetime="2026-11-15">15 novembre 2026</time></p>
-    </header>
-    <div class="reading">
-      <p>Le parc national de Yellowstone (en anglais : Yellowstone National Park) est un parc national des États-Unis, ainsi qu&#39;un site du patrimoine mondial protégé par l&#39;UNESCO, à cheval sur trois États : au nord-ouest du Wyoming (pour 96 % de sa surface) et, marginalement, au sud-est de l&#39;Idaho (en bordure de la forêt nationale de Caribou-Targhee) et au sud-ouest du Montana (adjacent à la forêt nationale de Gallatin). Créé le 1er mars 1872 par le président républicain Ulysses S. Grant, Yellowstone est le plus ancien parc national du monde. Il s&#39;étend sur 8 983 km2 (898 300 hectares), soit une superficie à peine moins importante que celle du département de la Dordogne.</p>
-      <p>Il constitue le deuxième plus grand parc naturel des États-Unis (à l&#39;exception de ceux localisés en Alaska). La caldeira de Yellowstone est célèbre pour ses phénomènes géothermiques ; elle contient deux tiers des geysers de la planète et de nombreuses sources chaudes. L&#39;une des figures emblématiques du parc est le geyser Old Faithful. Le parc abrite aussi de nombreux grands mammifères, comme des ours noirs, des grizzlys, des coyotes, des loups, des orignaux, des cerfs ou encore des troupeaux sauvages de bisons et de wapitis.</p>
+  <div class="carnet-tools flex flex-wrap items-center gap-2" hidden>
+    <div class="theme-switch flex flex-wrap" role="group" aria-label="Thème de la fiche">
+      <button type="button" data-theme-choice="paper" aria-pressed="true">Papier carnet</button>
+      <button type="button" data-theme-choice="dark" aria-pressed="false">Mode sombre</button>
     </div>
-    <footer class="source">
-      <p>Source · <a href="https://fr.wikipedia.org/w/index.php?oldid=240324896">« Parc national de Yellowstone » sur Wikipédia</a></p>
-      <p>Texte des contributeurs de Wikipédia, abrégé pour cette fiche. Licence <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">CC BY-SA 4.0</a>.</p>
-    </footer>
+    <button type="button" data-grid-toggle aria-pressed="false">Grille 5 mm</button>
+    <button type="button" data-print>Exporter en PDF A5</button>
+  </div>
+  <article class="sheet carnet">
+    <header class="carnet-title">
+      <p class="eyebrow">Fiche #03 · Sciences</p>
+      <h1>Parc national de Yellowstone</h1>
+      <p class="carnet-meta">Culture générale · 193 mots</p>
+    </header>
+    <div class="bento grid gap-3">
+      <section class="tile lead">
+        <h2>L’essentiel en bref</h2>
+        <p>Yellowstone protège un territoire où la chaleur du sous-sol se manifeste en surface. Ses geysers rendent visible la circulation de l’eau dans les fractures de la roche.</p>
+      </section>
+      <section class="tile key-points min-w-0">
+        <h2>Les 3 points clés</h2>
+        <ol>
+          <li><strong>Mécanisme.</strong> L’eau s’infiltre, se réchauffe en profondeur et remonte dans des conduits. Si un passage étroit freine l’évacuation de la chaleur, la pression augmente et une partie de l’eau se transforme brusquement en vapeur, qui expulse l’eau vers la surface.</li>
+          <li><strong>Portée.</strong> Sources chaudes et geysers n’obéissent donc pas au même rythme. Un geyser doit retrouver des conditions favorables de température, d’alimentation et de pression avant de produire une nouvelle éruption, dont le délai varie selon la plomberie souterraine.</li>
+          <li><strong>Postérité.</strong> Le parc est créé par une loi des États-Unis le premier mars 1872. Sa protection marque une étape dans l’histoire des parcs nationaux, sur un territoire où des peuples autochtones vivaient et circulaient bien avant cette décision.</li>
+        </ol>
+      </section>
+      <figure class="tile sketch min-w-0">
+        <figcaption><strong>Croquis mémo</strong><span>Trois strates pour la roche, les eaux profondes et la surface.</span></figcaption>
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 80 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M40 8 68 25 40 42 12 25ZM12 34l28 17 28-17M12 42l28 17 28-17"/></svg>
+      </figure>
+      <section class="tile anecdote">
+        <h2>L’anecdote à retenir</h2>
+        <p>Old Faithful n’entre pas en éruption exactement toutes les heures. Les agents du parc estiment le prochain départ en observant la durée de la précédente éruption, selon une relation mesurée sur place. La durée compte davantage que l’heure indiquée par une montre.</p>
+      </section>
+      <section class="tile reference">
+        <h2>Pour aller plus loin</h2>
+        <p><a href="https://www.nps.gov/features/yell/ofvec/exhibits/eruption/prediction/predict7.htm">National Park Service, « Predicting Geysers », centre d’interprétation d’Old Faithful</a></p>
+      </section>
+    </div>
   </article>
 </main>
 </body>

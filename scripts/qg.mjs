@@ -1,185 +1,28 @@
 import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises'
 import { parseArgs } from 'node:util'
+import { validateFiche } from './carnet.mjs'
+import { curateFiche } from './curation.mjs'
+import { carnet, escapeHtml, tools } from './maquette.mjs'
 
 const root = new URL('../', import.meta.url)
 const content = new URL('contenu/', root)
 const pages = new URL('fiches/', root)
-const topics = new URL('sujets.txt', root)
 const today = new Intl.DateTimeFormat('fr-CA', { timeZone: 'Europe/Paris' }).format(new Date())
 const frenchDate = new Intl.DateTimeFormat('fr-FR', { dateStyle: 'long', timeZone: 'UTC' })
-const sentenceSegmenter = new Intl.Segmenter('fr', { granularity: 'sentence' })
-const words = new Intl.Segmenter('fr', { granularity: 'word' })
-
-function escapeHtml(value) {
-  return String(value).replace(/[&<>"']/g, char => ({
-    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
-  })[char])
-}
-
-function countWords(text) {
-  return [...words.segment(text)].filter(segment => segment.isWordLike).length
-}
-
-function getExcerpt(text) {
-  const selected = []
-  let total = 0
-  for (const paragraph of text.trim().split(/\n+/)) {
-    const sentences = []
-    for (const { segment } of sentenceSegmenter.segment(paragraph.trim())) {
-      const size = countWords(segment)
-      if (total + size > 205) {
-        if (sentences.length) selected.push(sentences.join(' '))
-        return total >= 135 ? selected : []
-      }
-      if (size) {
-        sentences.push(segment.trim())
-        total += size
-      }
-    }
-    if (sentences.length) selected.push(sentences.join(' '))
-    if (total >= 180) break
-  }
-  return total >= 135 ? selected : []
-}
-
-async function wiki(parameters) {
-  const url = new URL('https://fr.wikipedia.org/w/api.php')
-  url.search = new URLSearchParams({ action: 'query', format: 'json', formatversion: '2', ...parameters })
-  const response = await fetch(url, {
-    headers: { 'User-Agent': 'QG-Carnets/1.0 (https://github.com/VachetVirginie/qg)' },
-    signal: AbortSignal.timeout(20_000),
-  })
-  if (!response.ok) throw new Error(`Wikipédia a répondu avec le statut ${response.status}.`)
-  const data = await response.json()
-  if (data.error) throw new Error(data.error.info)
-  return data
-}
-
-async function* qualityArticles() {
-  const candidates = []
-  let continuation
-  do {
-    const data = await wiki({
-      list: 'categorymembers',
-      cmtitle: 'Catégorie:Article de qualité',
-      cmnamespace: '0',
-      cmlimit: '500',
-      ...continuation,
-    })
-    candidates.push(...data.query.categorymembers)
-    continuation = data.continue
-  } while (continuation)
-
-  while (candidates.length) {
-    const index = Math.floor(Math.random() * candidates.length)
-    const [candidate] = candidates.splice(index, 1)
-    yield { pageids: candidate.pageid }
-  }
-}
-
-async function getArticle(query) {
-  const data = await wiki({
-    ...query, prop: 'extracts|info|pageprops', exintro: '1',
-    explaintext: '1', redirects: '1', ppprop: 'disambiguation',
-  })
-  const [article] = data.query?.pages ?? []
-  if (article && !article.missing && article.ns === 0 && !('disambiguation' in (article.pageprops ?? {}))) {
-    return article
-  }
-}
-
-async function findSubject(subject) {
-  const exact = await getArticle({ titles: subject })
-  if (exact) return exact
-
-  const results = await wiki({
-    list: 'search', srsearch: subject, srnamespace: '0', srlimit: '1', srprop: '',
-  })
-  const match = results.query?.search?.[0]
-  if (match) return getArticle({ pageids: match.pageid })
-}
-
-async function saveFiche(fiches, article, paragraphs) {
-  const fiche = {
-    number: (fiches.at(-1)?.number ?? 0) + 1,
-    date: today,
-    title: article.title,
-    pageId: article.pageid,
-    revision: article.lastrevid,
-    paragraphs,
-  }
-  await writeFile(new URL(`${identifier(fiche)}.json`, content), JSON.stringify(fiche, null, 2) + '\n', { flag: 'wx' })
-  fiches.push(fiche)
-  console.log(`Fiche #${identifier(fiche)} créée · ${fiche.title}`)
-}
-
-async function publishSubject(fiches, subject) {
-  const article = await findSubject(subject)
-  if (!article) return 'unavailable'
-  if (fiches.some(fiche => fiche.pageId === article.pageid)) {
-    console.log(`Une fiche existe déjà pour « ${article.title} ».`)
-    return 'duplicate'
-  }
-
-  const paragraphs = getExcerpt(article.extract ?? '')
-  if (!paragraphs.length) return 'unavailable'
-
-  await saveFiche(fiches, article, paragraphs)
-  return 'published'
-}
-
-async function publishQueuedSubject(fiches) {
-  const original = await readFile(topics, 'utf8')
-  const lines = original.split(/\r?\n/)
-  let published = false
-  for (const [index, line] of lines.entries()) {
-    if (published) break
-    const subject = line.trim().replace(/^(?:[-*•]|\d+[.)])\s+/, '')
-    if (!subject || subject.startsWith('#')) continue
-
-    const result = await publishSubject(fiches, subject)
-    lines[index] = result === 'unavailable' ? `# À préciser : ${subject}` : null
-    if (result === 'unavailable') console.log(`Aucun extrait adapté pour « ${subject} ».`)
-    published = result === 'published'
-  }
-
-  const updated = lines.filter(line => line !== null).join('\n')
-  if (updated !== original) await writeFile(topics, updated)
-  return published
-}
-
-async function publishDaily(fiches) {
-  if (fiches.some(fiche => fiche.date === today)) {
-    console.log(`Une fiche est déjà disponible pour le ${today}.`)
-    return
-  }
-  if (await publishQueuedSubject(fiches)) return
-
-  const used = new Set(fiches.map(fiche => fiche.pageId))
-  let attempts = 0
-  for await (const query of qualityArticles()) {
-    if (used.has(query.pageids)) continue
-    if (attempts++ >= 24) break
-    const article = await getArticle(query)
-    if (!article || used.has(article.pageid)) continue
-    const paragraphs = getExcerpt(article.extract ?? '')
-    if (!paragraphs.length) continue
-    await saveFiche(fiches, article, paragraphs)
-    return
-  }
-
-  throw new Error('Aucun article inédit avec un extrait de longueur adaptée n’a été trouvé.')
-}
 
 function identifier(fiche) {
   return String(fiche.number).padStart(3, '0')
+}
+
+function displayNumber(fiche) {
+  return String(fiche.number).padStart(2, '0')
 }
 
 function dateTag(fiche) {
   return `<time datetime="${fiche.date}">${frenchDate.format(new Date(fiche.date + 'T00:00:00Z'))}</time>`
 }
 
-function html(title, relative, markup, description) {
+function html(title, relative, markup, description, interactive = false) {
   return `<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -187,7 +30,9 @@ function html(title, relative, markup, description) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="${escapeHtml(description)}">
   <title>${escapeHtml(title)}</title>
-  <link rel="stylesheet" href="${relative}style.css">
+${interactive ? `  <link rel="stylesheet" href="${relative}tailwind.css">
+  <script src="${relative}carnet.js" defer></script>
+` : ''}  <link rel="stylesheet" href="${relative}style.css">
 </head>
 <body>
 ${markup}
@@ -199,7 +44,7 @@ ${markup}
 function homepage(fiches) {
   const [latest, ...archive] = [...fiches].reverse()
   const card = fiche => `<li><a class="card" href="fiches/${identifier(fiche)}.html">
-          <span class="eyebrow">Fiche #${identifier(fiche)}</span>
+          <span class="eyebrow">Fiche #${displayNumber(fiche)}${fiche.domain ? ` · ${escapeHtml(fiche.domain)}` : ''}</span>
           <h3>${escapeHtml(fiche.title)}</h3>
           ${dateTag(fiche)}
         </a></li>`
@@ -215,7 +60,7 @@ function homepage(fiches) {
     <p class="count"><strong>${fiches.length}</strong> ${fiches.length === 1 ? 'fiche' : 'fiches'}</p>
   </header>
   ${latest ? `<section class="featured" aria-labelledby="latest-title">
-    <p class="eyebrow">Dernière fiche · #${identifier(latest)}</p>
+    <p class="eyebrow">Dernière fiche · #${displayNumber(latest)}${latest.domain ? ` · ${escapeHtml(latest.domain)}` : ''}</p>
     <h2 id="latest-title">${escapeHtml(latest.title)}</h2>
     <p class="feature-date">${dateTag(latest)}</p>
     <a class="read-link" href="fiches/${identifier(latest)}.html">Lire la fiche <span aria-hidden="true">↗</span></a>
@@ -230,6 +75,15 @@ function homepage(fiches) {
 }
 
 function fichePage(fiche) {
+  if (fiche.intro) {
+    validateFiche(fiche)
+    return html(`Fiche #${displayNumber(fiche)} — ${fiche.title} | QG`, '../', `<main class="shell reader carnet-reader">
+  <nav aria-label="Collection"><a class="back" href="../">← Toutes les fiches</a></nav>
+  ${tools()}
+  ${carnet(fiche, displayNumber(fiche))}
+</main>`, `Fiche de culture générale sur ${fiche.title}, au format A5.`, true)
+  }
+
   const revisionUrl = new URL('/w/index.php', 'https://fr.wikipedia.org')
   revisionUrl.searchParams.set('oldid', fiche.revision)
   return html(`Fiche #${identifier(fiche)} — ${fiche.title} | QG`, '../', `<main class="shell reader">
@@ -261,11 +115,14 @@ const fiches = await Promise.all(filenames.map(async name => JSON.parse(await re
 fiches.sort((first, second) => first.number - second.number)
 
 const subject = values.subject?.trim()
-if (subject) {
-  const result = await publishSubject(fiches, subject)
-  if (result === 'unavailable') throw new Error(`Aucun extrait adapté pour « ${subject} ». Essaie un titre plus précis.`)
-} else if (values.daily) {
-  await publishDaily(fiches)
+if (subject || values.daily) {
+  const selected = await curateFiche(fiches, today, subject)
+  if (selected) {
+    const fiche = { ...selected, date: today, number: (fiches.at(-1)?.number ?? 0) + 1 }
+    await writeFile(new URL(`${identifier(fiche)}.json`, content), JSON.stringify(fiche, null, 2) + '\n', { flag: 'wx' })
+    fiches.push(fiche)
+    console.log(`Fiche #${displayNumber(fiche)} créée · ${fiche.title}`)
+  }
 }
 await writeFile(new URL('index.html', root), homepage(fiches))
 await Promise.all(fiches.map(fiche => writeFile(new URL(`${identifier(fiche)}.html`, pages), fichePage(fiche))))

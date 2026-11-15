@@ -1,2 +1,11 @@
-# Ajoute tes sujets ci-dessous, un par ligne, dans l’ordre souhaité.
-# Les lignes qui commencent par # restent dans le fichier et sont ignorées.
+# Une proposition par ligne. Le domaine avant | est facultatif.
+# Les sujets déjà publiés sont exclus automatiquement.
+Mythologie | Supplice de Tantale
+Mythologie | Tonneau des Danaïdes
+Art | Le hasard objectif des surréalistes
+Histoire | Montjuïc à Barcelone
+Économie | Le capital naturel et la comptabilité environnementale
+Économie | Le pic pétrolier et l’économie physique (flux vs monnaie)
+Société | Le syndrome NIMBY (« Not In My Backyard »)
+Sciences | La robustesse systémique (face à l’optimisation pure)
+Droit | Les assemblées citoyennes tirées au sort (démocratie délibérative)
