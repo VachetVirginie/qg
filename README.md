@@ -20,6 +20,8 @@ Sans clé, le tirage publie les fiches déjà rédigées et calibrées dans `dat
 
 Chaque fiche affiche deux phrases d’accroche, trois points clés, une anecdote, un croquis et une référence. Les boutons permettent de choisir le thème sombre, d’afficher les points tous les 5 mm et d’ouvrir le dialogue natif d’impression au format A5 portrait. Choisis **Enregistrer en PDF** dans le navigateur. Sur iPhone, utilise le partage de l’aperçu pour enregistrer le document dans Fichiers.
 
+Sur une fiche, **Exporter pour Instagram** ouvre un aperçu des trois images verticales de 1080 × 1350 pixels : couverture et accroche, trois points clés, puis anecdote et référence. Les PNG sont téléchargeables à l’unité ou ensemble dans une archive ZIP. Sur les appareils qui prennent en charge le partage natif de fichiers, les trois images peuvent aussi être envoyées ensemble au menu de partage.
+
 ## Travail local
 
 Avec Node.js 24 et pnpm 10 :

@@ -22,6 +22,10 @@ const drawings = {
   onde: '<path d="M8 32h64M8 32q8-28 16 0t16 0 16 0 16 0"/>',
 }
 
+export function sketchSvg(motif) {
+  return `<svg aria-hidden="true" focusable="false" viewBox="0 0 80 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${drawings[motif] ?? drawings.rayonnement}</svg>`
+}
+
 export function tools() {
   return `<div class="carnet-tools flex flex-wrap items-center gap-2" hidden>
     <div class="theme-switch flex flex-wrap" role="group" aria-label="Thème de la fiche">
@@ -30,13 +34,40 @@ export function tools() {
     </div>
     <button type="button" data-grid-toggle aria-pressed="false">Grille 5 mm</button>
     <button type="button" data-print>Exporter en PDF A5</button>
+    <button type="button" data-instagram hidden>Exporter pour Instagram <span aria-hidden="true">↗</span></button>
   </div>`
+}
+
+export function instagramDialog() {
+  return `<dialog class="instagram-dialog" aria-labelledby="instagram-title">
+    <div class="instagram-head">
+      <div>
+        <h2 id="instagram-title">Carrousel Instagram</h2>
+        <p>3 images PNG · 1080 × 1350 px</p>
+      </div>
+      <form method="dialog"><button type="submit" autofocus>Fermer</button></form>
+    </div>
+    <p class="instagram-status" role="status"></p>
+    <div class="instagram-preview" hidden>
+      <img width="1080" height="1350" alt="">
+      <div class="instagram-nav" role="group" aria-label="Images du carrousel">
+        <button type="button" data-previous aria-label="Image précédente">←</button>
+        <span data-slide-label aria-live="polite" aria-atomic="true"></span>
+        <button type="button" data-next aria-label="Image suivante">→</button>
+      </div>
+      <div class="instagram-actions">
+        <a data-download download>Télécharger ce PNG</a>
+        <a data-zip download>Télécharger les 3 (ZIP)</a>
+        <button type="button" data-share hidden>Partager les 3 images</button>
+      </div>
+    </div>
+  </dialog>`
 }
 
 export function carnet(fiche, number) {
   const escape = escapeHtml
   const { reference, sketch, event } = fiche
-  return `<article class="sheet carnet">
+  return `<article class="sheet carnet" data-fiche-number="${number}" data-fiche-domain="${escape(fiche.domain)}">
     <header class="carnet-title">
       <p class="eyebrow">Fiche #${number} · ${escape(fiche.domain)}</p>
       <h1>${escape(fiche.title)}</h1>
@@ -58,7 +89,7 @@ ${event ? `        <p class="event">Événement d’origine · <a href="${escape
       </section>
       <figure class="tile sketch min-w-0">
         <figcaption><strong>Croquis mémo</strong><span>${escape(sketch.caption)}</span></figcaption>
-        <svg aria-hidden="true" focusable="false" viewBox="0 0 80 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${drawings[sketch.motif]}</svg>
+        ${sketchSvg(sketch.motif)}
       </figure>
       <section class="tile anecdote">
         <h2>L’anecdote à retenir</h2>

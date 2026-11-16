@@ -2,7 +2,7 @@ import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises'
 import { parseArgs } from 'node:util'
 import { validateFiche } from './carnet.mjs'
 import { curateFiche } from './curation.mjs'
-import { carnet, escapeHtml, tools } from './maquette.mjs'
+import { carnet, escapeHtml, instagramDialog, sketchSvg, tools } from './maquette.mjs'
 
 const root = new URL('../', import.meta.url)
 const content = new URL('contenu/', root)
@@ -32,6 +32,7 @@ function html(title, relative, markup, description, interactive = false) {
   <title>${escapeHtml(title)}</title>
 ${interactive ? `  <link rel="stylesheet" href="${relative}tailwind.css">
   <script src="${relative}carnet.js" defer></script>
+  <script src="${relative}instagram.js" defer></script>
 ` : ''}  <link rel="stylesheet" href="${relative}style.css">
 </head>
 <body>
@@ -44,28 +45,40 @@ ${markup}
 function homepage(fiches) {
   const [latest, ...archive] = [...fiches].reverse()
   const card = fiche => `<li><a class="card" href="fiches/${identifier(fiche)}.html">
-          <span class="eyebrow">Fiche #${displayNumber(fiche)}${fiche.domain ? ` · ${escapeHtml(fiche.domain)}` : ''}</span>
+          <span class="card-figure">${sketchSvg(fiche.sketch?.motif)}</span>
+          <span class="eyebrow">#${displayNumber(fiche)}${fiche.domain ? ` · ${escapeHtml(fiche.domain)}` : ''}</span>
           <h3>${escapeHtml(fiche.title)}</h3>
-          ${dateTag(fiche)}
+          <span class="card-bottom">${dateTag(fiche)} <span aria-hidden="true">↗</span></span>
         </a></li>`
 
-  return html('QG — Carnets de culture générale', '', `<main class="shell">
+  return html('QG — Carnets de culture générale', '', `<main class="shell collection">
   <header class="masthead">
-    <div>
-      <p class="eyebrow">QG · Collection A5</p>
-      <h1>Carnets de<br class="display-break"> culture générale</h1>
-      <p class="intro">Une fiche à découvrir chaque jour, à lire ou à imprimer.</p>
-      <a class="topics-link" href="https://github.com/VachetVirginie/qg/edit/main/sujets.txt">Ajouter des sujets sur GitHub</a>
+    <nav class="collection-nav" aria-label="Collection">
+      <span class="wordmark" aria-hidden="true">QG</span>
+      <div>
+        ${archive.length ? '<a href="#archives">Archives</a>' : ''}
+        <a class="topics-link" href="https://github.com/VachetVirginie/qg/edit/main/sujets.txt">Ajouter des sujets sur GitHub</a>
+      </div>
+    </nav>
+    <div class="collection-heading">
+      <div>
+        <h1>Carnets de<br class="display-break"> <em>culture générale</em></h1>
+        <p class="intro">Une fiche par jour, à lire, recopier ou partager.</p>
+      </div>
+      <p class="count"><strong>${fiches.length}</strong> ${fiches.length === 1 ? 'fiche' : 'fiches'}</p>
     </div>
-    <p class="count"><strong>${fiches.length}</strong> ${fiches.length === 1 ? 'fiche' : 'fiches'}</p>
   </header>
   ${latest ? `<section class="featured" aria-labelledby="latest-title">
-    <p class="eyebrow">Dernière fiche · #${displayNumber(latest)}${latest.domain ? ` · ${escapeHtml(latest.domain)}` : ''}</p>
-    <h2 id="latest-title">${escapeHtml(latest.title)}</h2>
-    <p class="feature-date">${dateTag(latest)}</p>
-    <a class="read-link" href="fiches/${identifier(latest)}.html">Lire la fiche <span aria-hidden="true">↗</span></a>
+    <div class="featured-copy">
+      <p class="eyebrow">Dernière fiche · #${displayNumber(latest)}${latest.domain ? ` · ${escapeHtml(latest.domain)}` : ''}</p>
+      <h2 id="latest-title">${escapeHtml(latest.title)}</h2>
+      <p class="feature-date">${dateTag(latest)}</p>
+      ${latest.intro ? `<p class="feature-excerpt">${escapeHtml(latest.intro[0])}</p>` : ''}
+      <a class="read-link" href="fiches/${identifier(latest)}.html">Lire la fiche <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="featured-figure" aria-hidden="true">${sketchSvg(latest.sketch?.motif)}</div>
   </section>` : '<p>La collection accueillera bientôt sa première fiche.</p>'}
-  ${archive.length ? `<section class="archive" aria-labelledby="archive-title">
+  ${archive.length ? `<section class="archive" id="archives" aria-labelledby="archive-title">
     <h2 id="archive-title">Fiches précédentes</h2>
     <ul class="grid" role="list">
         ${archive.map(card).join('\n        ')}
@@ -81,6 +94,7 @@ function fichePage(fiche) {
   <nav aria-label="Collection"><a class="back" href="../">← Toutes les fiches</a></nav>
   ${tools()}
   ${carnet(fiche, displayNumber(fiche))}
+  ${instagramDialog()}
 </main>`, `Fiche de culture générale sur ${fiche.title}, au format A5.`, true)
   }
 

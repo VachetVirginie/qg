@@ -7,6 +7,7 @@
   <title>Fiche #04 — Tour Eiffel | QG</title>
   <link rel="stylesheet" href="../tailwind.css">
   <script src="../carnet.js" defer></script>
+  <script src="../instagram.js" defer></script>
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -19,8 +20,9 @@
     </div>
     <button type="button" data-grid-toggle aria-pressed="false">Grille 5 mm</button>
     <button type="button" data-print>Exporter en PDF A5</button>
+    <button type="button" data-instagram hidden>Exporter pour Instagram <span aria-hidden="true">↗</span></button>
   </div>
-  <article class="sheet carnet">
+  <article class="sheet carnet" data-fiche-number="04" data-fiche-domain="Architecture">
     <header class="carnet-title">
       <p class="eyebrow">Fiche #04 · Architecture</p>
       <h1>Tour Eiffel</h1>
@@ -53,6 +55,29 @@
       </section>
     </div>
   </article>
+  <dialog class="instagram-dialog" aria-labelledby="instagram-title">
+    <div class="instagram-head">
+      <div>
+        <h2 id="instagram-title">Carrousel Instagram</h2>
+        <p>3 images PNG · 1080 × 1350 px</p>
+      </div>
+      <form method="dialog"><button type="submit" autofocus>Fermer</button></form>
+    </div>
+    <p class="instagram-status" role="status"></p>
+    <div class="instagram-preview" hidden>
+      <img width="1080" height="1350" alt="">
+      <div class="instagram-nav" role="group" aria-label="Images du carrousel">
+        <button type="button" data-previous aria-label="Image précédente">←</button>
+        <span data-slide-label aria-live="polite" aria-atomic="true"></span>
+        <button type="button" data-next aria-label="Image suivante">→</button>
+      </div>
+      <div class="instagram-actions">
+        <a data-download download>Télécharger ce PNG</a>
+        <a data-zip download>Télécharger les 3 (ZIP)</a>
+        <button type="button" data-share hidden>Partager les 3 images</button>
+      </div>
+    </div>
+  </dialog>
 </main>
 </body>
 </html>
