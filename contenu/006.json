@@ -1,0 +1,28 @@
+{
+  "title": "Tonneau des Danaïdes",
+  "domain": "Mythologie",
+  "source": "personnel",
+  "intro": [
+    "Les Danaïdes sont les filles de Danaos, roi légendaire d’Argos.",
+    "Leur châtiment le plus célèbre consiste à remplir sans fin un récipient qui laisse échapper son eau."
+  ],
+  "mecanisme": "Les jeunes femmes sont mariées aux fils d’Égyptos, leur oncle. Danaos demande à ses filles de tuer leurs époux pendant la nuit des noces. La plupart obéissent, tandis qu’Hypermnestre épargne Lyncée.",
+  "portee": "Le récipient percé rend chaque effort inutile sans empêcher le suivant. Tout ce qui est versé se perd, si bien que le niveau attendu ne peut jamais être atteint. Le décor des Enfers transforme un geste quotidien en peine.",
+  "posterite": "L’expression « tonneau des Danaïdes » désigne une entreprise qui absorbe continuellement du travail, de l’argent ou du temps sans arriver à son terme. On peut imaginer le niveau de l’eau pour retrouver le sens de la formule.",
+  "anecdote": "Au musée Henri-Martin de Cahors, une toile de Tony Robert-Fleury montre les femmes autour d’un récipient. Présentée au Salon de 1873, cette peinture place le châtiment au premier plan du récit. La toile rejoint la collection de peinture du dix-neuvième siècle du musée.",
+  "reference": {
+    "label": "Musées Occitanie, « Les Danaïdes », notice de l’œuvre du musée Henri-Martin de Cahors",
+    "url": "https://musees-occitanie.fr/oeuvre/les-danaides/"
+  },
+  "sketch": {
+    "motif": "cycle",
+    "caption": "Une flèche qui revient sur elle-même figure le geste répété."
+  },
+  "aliases": [
+    "Danaïdes"
+  ],
+  "pageId": 99282,
+  "entity": "Q724907",
+  "date": "2026-11-16",
+  "number": 6
+}
