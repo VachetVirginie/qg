@@ -1,0 +1,26 @@
+{
+  "number": 7,
+  "date": "2026-11-16",
+  "title": "Les Moires : les tisseuses du destin",
+  "domain": "Mythologie",
+  "source": "personnel",
+  "pageId": 61887,
+  "entity": "Q180287",
+  "aliases": ["Moires", "Les Moires", "Les trois Moires", "Parques", "Les trois Parques", "Clotho, Lachésis et Atropos"],
+  "intro": [
+    "Pour les Grecs, trois divinités donnent au destin la forme d’un fil.",
+    "À elles trois, Clotho, Lachésis et Atropos figurent le commencement, la durée et la fin d’une vie humaine."
+  ],
+  "mecanisme": "Dans leur représentation la plus familière, Clotho file, Lachésis mesure le fil et Atropos le coupe. Le fuseau rappelle la naissance du fil, la mesure donne une image du temps accordé et la coupure marque la mort.",
+  "portee": "Chez Platon, le sort laisse une place à la responsabilité. Dans le mythe d’Er, le tirage au sort fixe l’ordre de passage des âmes, qui choisissent ensuite leur prochaine vie. Les Moires rendent ce choix irrévocable.",
+  "posterite": "À Rome, les Parques reprennent les traits des Moires. L’image traverse les siècles : vers 1794, le sculpteur Johann Heinrich Dannecker réunit les trois figures dans une terre cuite où chacune se reconnaît au geste qu’elle fait.",
+  "anecdote": "Platon fait aussi chanter les trois sœurs autour du fuseau de la Nécessité. Lachésis chante le passé, Clotho le présent et Atropos l’avenir. On peut les mémoriser comme les trois temps d’une même phrase.",
+  "reference": {
+    "label": "Platon, La République, livre X, mythe d’Er, 617c à 620e, traduction d’Émile Chambry.",
+    "url": "https://fr.wikisource.org/wiki/La_R%C3%A9publique_(trad._Chambry)/Livre_X"
+  },
+  "sketch": {
+    "motif": "fil",
+    "caption": "Un fuseau, un fil qui se déroule, puis une paire de ciseaux."
+  }
+}

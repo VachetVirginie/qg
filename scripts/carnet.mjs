@@ -1,5 +1,5 @@
 export const domains = ['Mythologie', 'Légende', 'Philosophie', 'Sciences', 'Architecture', 'Droit', 'Psychologie', 'Histoire', 'Art', 'Économie', 'Société', 'Géographie']
-export const motifs = ['cycle', 'equilibre', 'branches', 'trajectoire', 'couches', 'rayonnement', 'grille', 'tour', 'relief', 'onde', 'lentille']
+export const motifs = ['cycle', 'equilibre', 'branches', 'trajectoire', 'couches', 'rayonnement', 'grille', 'tour', 'relief', 'onde', 'lentille', 'fil']
 export const sourceNames = { personnel: 'Liste personnelle', general: 'Culture générale', actualite: 'Écho à l’actualité' }
 
 const words = new Intl.Segmenter('fr', { granularity: 'word' })

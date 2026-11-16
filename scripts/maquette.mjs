@@ -19,6 +19,7 @@ const drawings = {
   tour: '<path d="M40 7 19 54m21-47 21 47M29 36h22M24 47h32M13 54h54M36 13a8 8 0 0 0-7 5m15-5a8 8 0 0 1 7 5"/>',
   relief: '<path d="M8 49h64M11 49l24-30 16 18 8-8 12 20M35 19V9h12v10"/>',
   lentille: '<circle cx="40" cy="32" r="9"/><circle cx="9" cy="32" r="2"/><circle cx="71" cy="32" r="2"/><path d="M12 32q28-38 56 0m-56 0q28 38 56 0"/>',
+  fil: '<path d="M20 8v45M20 15l-9 14 9 13 9-13zM29 29c10 0 9 12 19 12h10m-5-5 13 10m-13 3 13-10"/><circle cx="69" cy="36" r="4"/><circle cx="69" cy="49" r="4"/>',
   onde: '<path d="M8 32h64M8 32q8-28 16 0t16 0 16 0 16 0"/>',
 }
 
