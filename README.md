@@ -6,7 +6,7 @@ Les [Carnets QG](https://vachetvirginie.github.io/qg/) publient des fiches en fr
 
 Ouvre [la liste personnelle sur GitHub](https://github.com/VachetVirginie/qg/edit/main/sujets.txt). Ajoute un sujet par ligne, éventuellement précédé d’un domaine, par exemple `Mythologie | Supplice de Tantale` ou `Droit | La séparation des pouvoirs`. Les puces et lignes numérotées sont acceptées. Enregistre sur `main` via **Commit changes**.
 
-Le tirage quotidien à 8 h 17, heure de Paris, favorise les sources les moins représentées dans les dix dernières fiches. La liste personnelle et la culture générale ont le même poids. Un événement récent, documenté et pertinent peut entrer dans le tirage avec un poids inférieur. Le tirage exclut les sujets déjà couverts par titre, alias et identifiants Wikipédia ou Wikidata et refuse deux mythes ou légendes successifs. Les sujets restent dans la liste pour conserver les propositions.
+Le tirage quotidien à 8 h, heure de Paris, favorise les sources les moins représentées dans les dix dernières fiches. La liste personnelle et la culture générale ont le même poids. Un événement récent, documenté et pertinent peut entrer dans le tirage avec un poids inférieur. Le tirage exclut les sujets déjà couverts par titre, alias et identifiants Wikipédia ou Wikidata et refuse deux mythes ou légendes successifs. Les sujets restent dans la liste pour conserver les propositions.
 
 ## Publication quotidienne
 
