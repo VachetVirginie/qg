@@ -1,0 +1,28 @@
+{
+  "title": "Montjuïc à Barcelone",
+  "domain": "Histoire",
+  "source": "personnel",
+  "intro": [
+    "Montjuïc est une colline de Barcelone qui domine le port et regarde la Méditerranée.",
+    "Ses fortifications, ses jardins et ses équipements sportifs racontent plusieurs usages successifs d’un même relief."
+  ],
+  "mecanisme": "La hauteur offre un poste d’observation sur les accès maritimes. Le château occupe la partie supérieure, tandis que les aménagements culturels et sportifs se répartissent sur les pentes et les replats reliés à la ville.",
+  "portee": "L’Exposition internationale de 1929 met en scène un autre visage de la colline, avec de nouveaux bâtiments et des jardins. Cette transformation donne aux visiteurs une raison de monter sur un site longtemps associé à la surveillance militaire.",
+  "posterite": "En 1992, les Jeux olympiques réinvestissent Montjuïc et font du stade l’un des centres de la compétition. Les installations rejoignent un ensemble déjà formé par le château, les espaces verts et les bâtiments issus de l’exposition.",
+  "anecdote": "Le stade de 1992 n’est pas né avec les Jeux. Construit en 1929, il accueille notamment les Jeux méditerranéens de 1955 avant sa rénovation olympique. Une seule enceinte permet ainsi de se rappeler trois dates de la colline.",
+  "reference": {
+    "label": "Comité international olympique, « Barcelona 1992: The Olympic Stadium », histoire du stade de Montjuïc",
+    "url": "https://www.olympics.com/ioc/news/barcelona-1992-the-olympic-stadium"
+  },
+  "sketch": {
+    "motif": "relief",
+    "caption": "Une colline au-dessus du port, coiffée d’un château."
+  },
+  "aliases": [
+    "Montjuïc"
+  ],
+  "pageId": 787922,
+  "entity": "Q1122701",
+  "date": "2026-11-17",
+  "number": 8
+}
