@@ -1,0 +1,30 @@
+{
+  "subject": "Le capital naturel et la comptabilité environnementale",
+  "title": "Le capital naturel",
+  "domain": "Économie",
+  "source": "personnel",
+  "intro": [
+    "Un marais peut ralentir une crue, accueillir des oiseaux et stocker du carbone.",
+    "La comptabilité du capital naturel aide à suivre ce qui permet à ce milieu de rendre ces services."
+  ],
+  "mecanisme": "Le capital naturel désigne un ensemble de ressources et de milieux, dont les sols, l’eau et les écosystèmes. Les comptes mesurent leur surface et leur état, puis décrivent les services qu’ils rendent à différents bénéficiaires.",
+  "portee": "Deux forêts de même superficie peuvent avoir des sols, des espèces et des capacités de stockage très différents. Mesurer leur surface et leur état séparément permet de repérer une dégradation qui resterait invisible sur une carte.",
+  "posterite": "Le cadre des Nations unies permet de rapprocher ces informations des statistiques économiques. Les comptes peuvent rester physiques, par exemple en hectares ou en tonnes. Une estimation monétaire supplémentaire est possible pour certains services, selon l’usage prévu.",
+  "anecdote": "Une zone humide en amont peut réduire les dégâts d’une crue en aval. Cartographier ensemble le milieu et les bénéficiaires montre comment une décision prise en un lieu peut affecter des personnes qui habitent dans d’autres communes en aval.",
+  "reference": {
+    "label": "Nations unies, SEEA Ecosystem Accounting, présentation des cinq comptes.",
+    "url": "https://seea.un.org/ecosystem-accounting"
+  },
+  "sketch": {
+    "motif": "couches",
+    "caption": "Trois couches pour les milieux, leur état et les services rendus."
+  },
+  "aliases": [
+    "Capital naturel",
+    "Comptabilité des écosystèmes"
+  ],
+  "pageId": 7046973,
+  "entity": "Q1540268",
+  "date": "2026-11-18",
+  "number": 9
+}
