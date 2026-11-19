@@ -1,0 +1,29 @@
+{
+  "subject": "La séparation des pouvoirs",
+  "title": "La séparation des pouvoirs",
+  "domain": "Droit",
+  "source": "general",
+  "intro": [
+    "Une même autorité peut-elle écrire une règle, la faire appliquer et trancher une contestation ?",
+    "La séparation des pouvoirs cherche à limiter cette concentration en répartissant les fonctions de l’État."
+  ],
+  "mecanisme": "On distingue généralement la fonction législative, qui élabore les lois, la fonction exécutive, qui les met en œuvre, et la fonction juridictionnelle, qui tranche les litiges. Les institutions et leurs relations varient selon les constitutions.",
+  "portee": "La répartition crée des limites : une institution qui gouverne peut être contrôlée, et une décision peut être examinée par un juge indépendant. Selon le régime, des institutions peuvent aussi agir ensemble, par exemple pour adopter un budget.",
+  "posterite": "En France, la Déclaration des droits de l’homme et du citoyen de 1789 associe la séparation des pouvoirs à la garantie des droits. Cette idée reste une référence pour examiner l’équilibre des institutions et leurs garanties d’indépendance.",
+  "anecdote": "L’article 16 de la Déclaration formule cette idée en une seule phrase. Il relie deux sujets qu’on pourrait croire séparés : les droits d’une personne et la manière dont sont réparties les décisions au sommet de l’État.",
+  "reference": {
+    "label": "Légifrance, Déclaration des droits de l’homme et du citoyen de 1789, article 16.",
+    "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000697056/"
+  },
+  "sketch": {
+    "motif": "equilibre",
+    "caption": "Une balance pour les pouvoirs qui peuvent se limiter mutuellement."
+  },
+  "aliases": [
+    "Séparation des pouvoirs"
+  ],
+  "pageId": 92481,
+  "entity": "Q79896",
+  "date": "2026-11-19",
+  "number": 10
+}
