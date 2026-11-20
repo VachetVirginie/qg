@@ -1,0 +1,29 @@
+{
+  "title": "Supplice de Tantale",
+  "domain": "Mythologie",
+  "source": "personnel",
+  "intro": [
+    "Dans l’Odyssée, Tantale a de l’eau tout autour de lui et des fruits au-dessus de la tête.",
+    "Chaque fois qu’il essaie de boire ou de manger, ce qu’il désire se dérobe."
+  ],
+  "mecanisme": "Ulysse aperçoit Tantale parmi les morts. Quand le condamné se penche, l’eau disparaît et le sol se découvre à ses pieds. Quand il tend le bras, le vent soulève les branches hors de sa portée.",
+  "portee": "La punition repose sur une proximité trompeuse. Voir une chose à portée de main suffit à faire renaître l’espoir, puis le mouvement même qui devait l’atteindre déclenche sa disparition. Le geste recommence avec le désir.",
+  "posterite": "L’expression « supplice de Tantale » s’emploie encore pour une satisfaction toujours proche et toujours refusée. Le récit ancien a transmis une image qui permet de raconter très vite un sentiment de frustration.",
+  "anecdote": "Tous les poètes ne donnent pas le même décor à la peine. Chez Pindare, une pierre suspendue menace de tomber sur Tantale. Retenir les deux images permet de reconnaître des versions différentes d’un même personnage. La pierre apparaît notamment dans la Première Olympique de Pindare.",
+  "reference": {
+    "label": "Éduscol, « Châtiment de Tantale », Homère, Odyssée XI, vers 582 à 591, et Pindare",
+    "url": "https://odysseum.eduscol.education.fr/chatiment-de-tantale"
+  },
+  "sketch": {
+    "motif": "branches",
+    "caption": "Une branche en hauteur figure les fruits qui échappent à Tantale."
+  },
+  "aliases": [
+    "Tantale (mythologie)",
+    "Tantale"
+  ],
+  "pageId": 22613,
+  "entity": "Q397676",
+  "date": "2026-11-20",
+  "number": 11
+}
