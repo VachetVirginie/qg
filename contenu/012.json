@@ -1,0 +1,28 @@
+{
+  "title": "L’effet Stroop",
+  "domain": "Psychologie",
+  "source": "general",
+  "intro": [
+    "Imagine le mot ROUGE imprimé à l’encre bleue et essaie de nommer la couleur de l’encre.",
+    "L’effort supplémentaire ressenti dans cette situation illustre l’effet Stroop."
+  ],
+  "mecanisme": "Le mot active une réponse possible tandis que la couleur en exige une autre. Comme la lecture est bien entraînée chez l’adulte lettré, il faut sélectionner la réponse de couleur malgré l’information fournie par le mot.",
+  "portee": "Les chercheurs comparent notamment le temps nécessaire pour nommer une couleur quand le mot est compatible ou incompatible avec elle. Le surcroît de temps dans la situation de conflit aide à étudier la sélection de l’information pertinente.",
+  "posterite": "Le dispositif a inspiré des variantes avec des images et d’autres catégories de mots. Pour interpréter les résultats, on tient compte du niveau de lecture, de la vitesse de réponse et des conditions de passation.",
+  "anecdote": "Dans son article de 1935, John Ridley Stroop compare aussi les deux consignes inverses. La présence de mots gênait fortement la dénomination des couleurs, tandis que l’encre discordante ralentissait beaucoup moins la lecture des mots dans son expérience.",
+  "reference": {
+    "label": "J. Ridley Stroop, « Studies of interference in serial verbal reactions », Journal of Experimental Psychology, 1935",
+    "url": "https://doi.org/10.1037/H0054651"
+  },
+  "sketch": {
+    "motif": "branches",
+    "caption": "Deux chemins concurrents pour un même signal : lire et nommer."
+  },
+  "aliases": [
+    "Effet Stroop"
+  ],
+  "pageId": 976557,
+  "entity": "Q384176",
+  "date": "2026-11-21",
+  "number": 12
+}
