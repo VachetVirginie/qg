@@ -60,9 +60,10 @@ export function parseTopics(text, source) {
     if (!cleaned || cleaned.startsWith('#')) return []
     const [prefix, ...rest] = cleaned.split('|')
     const domain = domains.find(label => normalize(label) === normalize(prefix))
-    return domain && rest.length
-      ? [{ title: rest.join('|').trim(), domain, source }].filter(topic => topic.title)
-      : [{ title: cleaned, source }]
+    if (!rest.length) return [{ title: cleaned, source }]
+    const title = rest.join('|').trim()
+    if (!title) return []
+    return domain ? [{ title, domain, source }] : [{ title, source }]
   })
 }
 

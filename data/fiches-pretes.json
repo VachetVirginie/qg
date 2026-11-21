@@ -237,5 +237,141 @@
     ],
     "pageId": 453503,
     "entity": "Q219540"
+  },
+  {
+    "title": "La particule Oh-My-God",
+    "subject": "La particule Oh-My-God",
+    "domain": "Sciences",
+    "source": "personnel",
+    "intro": [
+      "En 1991, un détecteur de l’Utah enregistre un rayon cosmique d’une énergie stupéfiante.",
+      "Son surnom, particule Oh-My-God, traduit la surprise provoquée par une énergie immense concentrée dans un projectile microscopique."
+    ],
+    "mecanisme": "Le rayon cosmique heurte l’atmosphère et déclenche une cascade de particules secondaires. L’expérience Fly’s Eye observe la lumière produite par cette gerbe pour estimer l’énergie et la direction de la particule arrivée de l’espace.",
+    "portee": "L’énergie reconstruite atteint environ trois cent vingt milliards de milliards d’électronvolts. La difficulté consiste à expliquer quel accélérateur naturel peut atteindre une telle énergie et comment la particule a voyagé jusqu’à nous sans perdre une grande partie de celle-ci.",
+    "posterite": "Les observatoires étudient ces événements rares pour comprendre les sources des rayons cosmiques. Les champs magnétiques peuvent dévier leur trajet, ce qui complique la recherche de l’objet qui les a émis à partir de leur direction d’arrivée.",
+    "anecdote": "En 2021, Telescope Array détecte un autre rayon cosmique extraordinaire, surnommé Amaterasu. Annoncé en 2023, cet événement rappelle que les particules les plus énergétiques continuent de poser une énigme aux chercheurs, même lorsque leur passage est solidement mesuré.",
+    "reference": {
+      "label": "Université de l’Utah, « Second highest-energy cosmic ray ever », 2023.",
+      "url": "https://science.utah.edu/faculty/faculty-research/cosmic-ray/"
+    },
+    "sketch": {
+      "motif": "trajectoire",
+      "caption": "Une trajectoire arrive sur Terre et se ramifie dans l’atmosphère."
+    },
+    "aliases": [
+      "Particule Oh-My-God"
+    ],
+    "pageId": 7688508,
+    "entity": "Q61931"
+  },
+  {
+    "title": "Le syndrome de Kessler",
+    "subject": "Le syndrome de Kessler",
+    "domain": "Sciences",
+    "source": "personnel",
+    "intro": [
+      "Un satellite détruit peut laisser des milliers de fragments qui continuent de tourner autour de la Terre.",
+      "Le syndrome de Kessler décrit une situation où les collisions alimentent elles-mêmes la production de nouveaux débris."
+    ],
+    "mecanisme": "Une collision entre objets en orbite disperse des fragments à grande vitesse. Certains restent longtemps sur des trajectoires qui croisent celles d’autres satellites. Chaque choc supplémentaire peut donc produire de nouveaux projectiles et augmenter le risque de rencontres futures.",
+    "portee": "Cette croissance peut se poursuivre même si les lancements cessent, lorsque les collisions produisent davantage de débris que les mécanismes naturels n’en éliminent. Le phénomène dépend des altitudes, des densités d’objets et de la durée de séjour des fragments.",
+    "posterite": "Proposé par Donald Kessler et Burton Cour-Palais en 1978, ce scénario éclaire la gestion des orbites. Réduire les objets abandonnés, prévenir les fragmentations et éviter certains chocs contribue à limiter l’accumulation qui prépare les collisions suivantes.",
+    "anecdote": "Donald Kessler a rappelé que l’expression populaire n’avait jamais reçu de définition strictement universelle. Son idée initiale portait sur une évolution progressive du milieu orbital, étudiée à partir de modèles de populations et de collisions.",
+    "reference": {
+      "label": "Donald Kessler, « The Kessler Syndrome », communication scientifique, NASA, 2010.",
+      "url": "https://ntrs.nasa.gov/api/citations/20100017226/downloads/20100017226.pdf"
+    },
+    "sketch": {
+      "motif": "branches",
+      "caption": "Une collision produit des fragments qui provoquent d’autres collisions."
+    },
+    "aliases": [
+      "Syndrome de Kessler"
+    ],
+    "pageId": 1368492,
+    "entity": "Q693564"
+  },
+  {
+    "title": "L’événement de Carrington",
+    "subject": "L’événement de Carrington",
+    "domain": "Sciences",
+    "source": "personnel",
+    "intro": [
+      "En 1859, une violente perturbation du champ magnétique terrestre accompagne des aurores visibles jusque dans les régions tropicales.",
+      "Les lignes télégraphiques deviennent un témoin spectaculaire de l’activité du Soleil."
+    ],
+    "mecanisme": "Une forte perturbation du milieu spatial peut modifier rapidement le champ magnétique près du sol. Ces variations induisent des courants dans de longs conducteurs, notamment les lignes télégraphiques, dont le fonctionnement dépend alors de conditions dépassant leur installation locale.",
+    "portee": "Des services télégraphiques sont perturbés et des étincelles provoquent des incendies sur certaines lignes. Les observations d’aurores et les relevés magnétiques permettent de rapprocher des manifestations dispersées et de comprendre qu’elles appartiennent à un même épisode.",
+    "posterite": "L’événement sert aujourd’hui de référence pour préparer les systèmes techniques aux épisodes extrêmes de météorologie spatiale. L’électricité, les communications et la navigation par satellite exposent des infrastructures différentes de celles de 1859 aux effets de telles perturbations.",
+    "anecdote": "Les archives du Met Office conservent l’étude publiée en 1861 sur les mesures photographiques de l’observatoire de Kew. Le titre couvre une séquence allant du 28 août au 7 septembre : l’épisode historique déborde donc la seule journée associée au nom de Carrington.",
+    "reference": {
+      "label": "Met Office, archive de Balfour Stewart sur les perturbations magnétiques de 1859, publication de 1861.",
+      "url": "https://library.metoffice.gov.uk/Portal/Default/en-GB/recordview/index/634333"
+    },
+    "sketch": {
+      "motif": "onde",
+      "caption": "Une perturbation venue du Soleil atteint le champ magnétique terrestre."
+    },
+    "aliases": [
+      "Tempête solaire de 1859",
+      "Événement de Carrington"
+    ],
+    "pageId": 3466015,
+    "entity": "Q662051"
+  },
+  {
+    "title": "Le Codex Gigas",
+    "subject": "Le Codex Gigas",
+    "domain": "Histoire",
+    "source": "personnel",
+    "intro": [
+      "Le Codex Gigas est un immense manuscrit latin réalisé en Bohême au début du treizième siècle.",
+      "Sa taille et son célèbre portrait du diable ont longtemps nourri la curiosité autour de sa fabrication."
+    ],
+    "mecanisme": "Des textes sont copiés sur de grands feuillets de parchemin, réunis dans un même volume. Les pages mesurent environ quatre-vingt-neuf centimètres de haut. Le travail articule copie, organisation des colonnes, décoration et assemblage matériel du livre.",
+    "portee": "Le volume rassemble plusieurs œuvres, parmi lesquelles des livres bibliques et d’autres textes de savoir. Un manuscrit peut ainsi former une bibliothèque condensée : son unité matérielle ne signifie pas qu’il contient un seul texte ou un seul genre.",
+    "posterite": "La numérisation permet aujourd’hui de parcourir ce volume exceptionnel sans manipuler ses feuillets. Les notices de catalogue distinguent son contenu, sa datation et ses caractéristiques matérielles, offrant plusieurs portes d’entrée au lecteur qui explore ce monument du livre médiéval.",
+    "anecdote": "Le surnom de Bible du diable met surtout en avant une image frappante. Le catalogue suédois présente pourtant le manuscrit comme un ensemble de textes : il commence par détailler les livres de l’Ancien Testament et les feuillets qu’ils occupent.",
+    "reference": {
+      "label": "Bibliothèque nationale de Suède, catalogue Manuscripta, manuscrit A 148, Codex Gigas.",
+      "url": "https://manuscripta.kb.se/ms/100500"
+    },
+    "sketch": {
+      "motif": "couches",
+      "caption": "Des feuillets superposés rappellent un livre qui rassemble plusieurs œuvres."
+    },
+    "aliases": [
+      "Codex Gigas"
+    ],
+    "pageId": 1723466,
+    "entity": "Q212180"
+  },
+  {
+    "title": "Hans le Malin, le cheval",
+    "subject": "Hans le Malin, le cheval",
+    "domain": "Psychologie",
+    "source": "personnel",
+    "intro": [
+      "Au début du vingtième siècle, un cheval nommé Hans semble répondre à des calculs en frappant du sabot.",
+      "Le psychologue Oskar Pfungst cherche ce qui permet réellement à l’animal de donner ses réponses."
+    ],
+    "mecanisme": "Pfungst compare des situations où la personne qui interroge connaît la solution et d’autres où elle l’ignore. Il examine aussi ce qui se passe quand Hans ne peut pas voir cette personne, afin d’isoler les informations accessibles au cheval.",
+    "portee": "Les résultats dépendent fortement de ces conditions. Hans réagit à de petits changements involontaires de posture et de mouvement. Une réponse apparemment arithmétique peut donc émerger d’une interaction dans laquelle l’interrogateur transmet des indices sans s’en rendre compte.",
+    "posterite": "L’étude illustre pourquoi une expérience doit contrôler les attentes et les informations de ceux qui y participent. Elle invite notamment à organiser des observations où la personne qui recueille la réponse ne connaît pas la solution attendue à cet instant.",
+    "anecdote": "Dans une série de lectures de chiffres, Pfungst rapporte huit pour cent de bonnes réponses quand l’interrogateur ignore le chiffre et quatre-vingt-dix-huit pour cent lorsqu’il le connaît. Comparer les conditions transforme l’interprétation du numéro présenté au public.",
+    "reference": {
+      "label": "Oskar Pfungst, Clever Hans, traduction anglaise de 1911, résultats expérimentaux.",
+      "url": "https://www.gutenberg.org/files/33936/33936-h/33936-h.htm"
+    },
+    "sketch": {
+      "motif": "equilibre",
+      "caption": "Une réponse dépend de ce que sait la personne qui pose la question."
+    },
+    "aliases": [
+      "Hans le Malin"
+    ],
+    "pageId": 436876,
+    "entity": "Q1127291"
   }
 ]

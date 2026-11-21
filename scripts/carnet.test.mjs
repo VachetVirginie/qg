@@ -82,3 +82,11 @@ test('la rédaction contrôle le nombre de mots et les liens renvoyés par la re
   assert.equal(attempts.length, 2)
   assert.ok(attempts[1].previousCount < 185)
 })
+
+test('les catégories personnelles conservent un titre exploitable', () => {
+  assert.deepEqual(parseTopics('Culture geek | Les MUD\nSociologie | L’habitus\nArts | Le ready-made\nSciences | \n', 'personnel'), [
+    { title: 'Les MUD', source: 'personnel' },
+    { title: 'L’habitus', source: 'personnel' },
+    { title: 'Le ready-made', source: 'personnel' },
+  ])
+})
