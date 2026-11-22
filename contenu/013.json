@@ -1,0 +1,29 @@
+{
+  "subject": "Le clair-obscur",
+  "title": "Le clair-obscur",
+  "domain": "Art",
+  "source": "general",
+  "intro": [
+    "Dans un tableau, une main et un visage peuvent se détacher d’une pièce presque sombre.",
+    "Le clair-obscur organise la lumière et l’ombre pour donner du volume aux formes et orienter le regard."
+  ],
+  "mecanisme": "Le peintre répartit les valeurs, du clair au foncé. En faisant passer une joue du côté éclairé au côté ombré, il rend sa rondeur perceptible. Un contraste plus marqué détache une figure et lui donne davantage de présence.",
+  "portee": "La lumière peut suivre une logique de scène. Lorsqu’un faisceau touche une main tendue, l’œil s’y arrête avant de parcourir les alentours. Les parties peu éclairées laissent deviner le décor ou maintiennent une part de mystère.",
+  "posterite": "Au début du dix-septième siècle, Le Caravage et ses suiveurs exploitent ces effets pour intensifier des scènes narratives. Les contrastes servent aussi ailleurs : un éclairage latéral en photographie ou au cinéma aide à modeler un visage.",
+  "anecdote": "Dans sa Vocation de saint Matthieu, Giovanni Battista Caracciolo concentre la lumière sur des visages et des gestes. On peut suivre l’action en repérant les zones éclairées avant même de reconnaître les personnages du récit.",
+  "reference": {
+    "label": "Metropolitan Museum of Art, Giovanni Battista Caracciolo, The Calling of Saint Matthew.",
+    "url": "https://www.metmuseum.org/art/collection/search/712946"
+  },
+  "sketch": {
+    "motif": "rayonnement",
+    "caption": "Une source de lumière et des rayons pour guider le regard."
+  },
+  "aliases": [
+    "Clair-obscur"
+  ],
+  "pageId": 453503,
+  "entity": "Q219540",
+  "date": "2026-11-22",
+  "number": 13
+}
