@@ -1,0 +1,28 @@
+{
+  "title": "La dérive des continents",
+  "domain": "Sciences",
+  "source": "general",
+  "intro": [
+    "Au début du vingtième siècle, Alfred Wegener propose que les continents aient changé de position au cours du temps.",
+    "Leur séparation actuelle aurait suivi la fragmentation d’un ancien ensemble, la Pangée."
+  ],
+  "mecanisme": "Wegener rapproche les contours des continents et compare les fossiles et les terrains situés de part et d’autre des océans. Une ressemblance isolée pourrait être fortuite, mais plusieurs indices indépendants deviennent cohérents si les terres ont été réunies.",
+  "portee": "Son hypothèse explique pourquoi des espèces anciennes semblables sont retrouvées sur des rives désormais éloignées. Elle pose aussi une question physique à laquelle Wegener n’apporte pas de réponse convaincante pour ses contemporains : quelle force déplace les continents ?",
+  "posterite": "La tectonique des plaques reprend l’idée du déplacement en la reliant à l’ouverture et à la fermeture des océans. Les continents sont entraînés par des plaques qui comprennent aussi, pour certaines, une partie du plancher océanique.",
+  "anecdote": "Les fossiles du petit reptile aquatique Mesosaurus sont connus en Amérique du Sud et en Afrique australe. Leur répartition se comprend mieux quand on rapproche ces terres que si on imagine une traversée de l’Atlantique actuel.",
+  "reference": {
+    "label": "US Geological Survey, « Wegener’s Puzzling Continental Drift Evidence », carte des indices fossiles",
+    "url": "https://www.usgs.gov/educational-resources/wegeners-puzzling-continental-drift-evidence"
+  },
+  "sketch": {
+    "motif": "trajectoire",
+    "caption": "Deux rivages séparés, reliés par une flèche qui rappelle le mouvement."
+  },
+  "aliases": [
+    "Dérive des continents"
+  ],
+  "pageId": 101006,
+  "entity": "Q178605",
+  "date": "2026-11-23",
+  "number": 14
+}
