@@ -34,3 +34,5 @@ python3 -m http.server 8000
 ```
 
 Ouvre <http://localhost:8000>. La commande `node scripts/qg.mjs --daily` effectue le tirage si la date n’est pas déjà représentée. `node scripts/qg.mjs --subject 'Montjuïc à Barcelone'` demande un sujet précis. Les liens numérotés d’origine restent valides.
+
+Les lancements de secours de 8 h 15 et 8 h 45, heure de Paris, reprennent la publication si le premier lancement est retardé. La vérification de la date du jour empêche de créer un deuxième contenu. Le délai du planificateur GitHub peut varier.
