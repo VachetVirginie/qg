@@ -1,0 +1,29 @@
+{
+  "title": "Vespasien",
+  "subject": "Vespasien",
+  "domain": "Histoire",
+  "source": "personnel",
+  "aliases": [
+    "Titus Flavius Vespasianus"
+  ],
+  "intro": [
+    "Vespasien devient empereur en 69, au terme d’une guerre civile qui a vu plusieurs prétendants se succéder.",
+    "Il inaugure la dynastie des Flaviens et gouverne jusqu’à sa mort en 79."
+  ],
+  "mecanisme": "Son autorité repose d’abord sur le soutien des armées et la victoire de son camp. Une fois le pouvoir acquis, il rétablit les finances impériales et organise sa succession en associant ses fils, Titus et Domitien, au gouvernement.",
+  "portee": "Le nouveau régime cherche à rendre sa stabilité visible dans Rome. Vespasien restaure des bâtiments et entreprend un amphithéâtre sur un espace auparavant occupé par le palais de Néron. Cet édifice deviendra le Colisée, inauguré sous Titus.",
+  "posterite": "Le récit de Suétone le présente comme un empereur économe, capable de plaisanter sur l’argent et sur sa propre position. Ces anecdotes contribuent à construire une image de simplicité qui distingue sa dynastie de celle de Néron.",
+  "anecdote": "Selon Suétone, Titus lui reproche un impôt lié à l’urine. Vespasien lui fait sentir une pièce provenant des premières recettes, puis demande si elle sent mauvais. Titus répond que non : l’origine de la recette n’a laissé aucune odeur sur la monnaie.",
+  "reference": {
+    "label": "Suétone, Vie de Vespasien, chapitres 8, 9, 16 et 23, traduction de J. C. Rolfe.",
+    "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Suetonius/12Caesars/Vespasian*.html"
+  },
+  "sketch": {
+    "motif": "couches",
+    "caption": "Trois niveaux pour la guerre civile, la reconstruction et la dynastie."
+  },
+  "pageId": 35263,
+  "entity": "Q1419",
+  "date": "2026-11-24",
+  "number": 15
+}
