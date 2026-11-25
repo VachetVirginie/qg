@@ -1,0 +1,29 @@
+{
+  "title": "Néron",
+  "subject": "Néron",
+  "domain": "Histoire",
+  "source": "personnel",
+  "aliases": [
+    "Nero"
+  ],
+  "intro": [
+    "Empereur de 54 à 68, Néron est devenu l’un des personnages célèbres de la Rome antique.",
+    "Son image mêle exercice du pouvoir, spectacles et récits hostiles transmis après sa mort."
+  ],
+  "mecanisme": "L’empereur gouverne avec des conseillers, des administrateurs et des soutiens militaires. Mais sa position dépend aussi des relations avec le Sénat et les élites. Les conflits du règne et les répressions pèsent sur les témoignages qui nous sont parvenus.",
+  "portee": "L’incendie de Rome de 64 concentre les difficultés de l’enquête historique. Tacite décrit le désastre tout en laissant incertaine son origine. Il rapporte des secours organisés par Néron et une rumeur accusant l’empereur de chanter pendant la catastrophe.",
+  "posterite": "Ces éléments nourrissent un portrait durable de souverain cruel et d’artiste démesuré. Étudier Néron suppose de comparer les récits anciens, les vestiges et les objets, en distinguant les actes documentés des accusations et des interprétations qui façonnent sa réputation.",
+  "anecdote": "Tacite précise qu’au début de l’incendie, Néron séjournait à Antium. Le récit populaire qui le place immédiatement devant Rome en flammes simplifie donc même une source ancienne sévère envers lui. Une indication de lieu suffit ici à compliquer une image célèbre.",
+  "reference": {
+    "label": "Tacite, Annales, livre XV, chapitres 38 à 44, traduction de John Jackson.",
+    "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Tacitus/Annals/15B*.html"
+  },
+  "sketch": {
+    "motif": "equilibre",
+    "caption": "Une balance pour confronter les faits, les rumeurs et les sources."
+  },
+  "pageId": 23105,
+  "entity": "Q1413",
+  "date": "2026-11-25",
+  "number": 16
+}
