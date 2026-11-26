@@ -1,0 +1,29 @@
+{
+  "title": "Le Codex Gigas",
+  "subject": "Le Codex Gigas",
+  "domain": "Histoire",
+  "source": "personnel",
+  "intro": [
+    "Le Codex Gigas est un immense manuscrit latin réalisé en Bohême au début du treizième siècle.",
+    "Sa taille et son célèbre portrait du diable ont longtemps nourri la curiosité autour de sa fabrication."
+  ],
+  "mecanisme": "Des textes sont copiés sur de grands feuillets de parchemin, réunis dans un même volume. Les pages mesurent environ quatre-vingt-neuf centimètres de haut. Le travail articule copie, organisation des colonnes, décoration et assemblage matériel du livre.",
+  "portee": "Le volume rassemble plusieurs œuvres, parmi lesquelles des livres bibliques et d’autres textes de savoir. Un manuscrit peut ainsi former une bibliothèque condensée : son unité matérielle ne signifie pas qu’il contient un seul texte ou un seul genre.",
+  "posterite": "La numérisation permet aujourd’hui de parcourir ce volume exceptionnel sans manipuler ses feuillets. Les notices de catalogue distinguent son contenu, sa datation et ses caractéristiques matérielles, offrant plusieurs portes d’entrée au lecteur qui explore ce monument du livre médiéval.",
+  "anecdote": "Le surnom de Bible du diable met surtout en avant une image frappante. Le catalogue suédois présente pourtant le manuscrit comme un ensemble de textes : il commence par détailler les livres de l’Ancien Testament et les feuillets qu’ils occupent.",
+  "reference": {
+    "label": "Bibliothèque nationale de Suède, catalogue Manuscripta, manuscrit A 148, Codex Gigas.",
+    "url": "https://manuscripta.kb.se/ms/100500"
+  },
+  "sketch": {
+    "motif": "couches",
+    "caption": "Des feuillets superposés rappellent un livre qui rassemble plusieurs œuvres."
+  },
+  "aliases": [
+    "Codex Gigas"
+  ],
+  "pageId": 1723466,
+  "entity": "Q212180",
+  "date": "2026-11-26",
+  "number": 17
+}
