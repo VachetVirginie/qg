@@ -1,0 +1,29 @@
+{
+  "title": "La particule Oh-My-God",
+  "subject": "La particule Oh-My-God",
+  "domain": "Sciences",
+  "source": "personnel",
+  "intro": [
+    "En 1991, un détecteur de l’Utah enregistre un rayon cosmique d’une énergie stupéfiante.",
+    "Son surnom, particule Oh-My-God, traduit la surprise provoquée par une énergie immense concentrée dans un projectile microscopique."
+  ],
+  "mecanisme": "Le rayon cosmique heurte l’atmosphère et déclenche une cascade de particules secondaires. L’expérience Fly’s Eye observe la lumière produite par cette gerbe pour estimer l’énergie et la direction de la particule arrivée de l’espace.",
+  "portee": "L’énergie reconstruite atteint environ trois cent vingt milliards de milliards d’électronvolts. La difficulté consiste à expliquer quel accélérateur naturel peut atteindre une telle énergie et comment la particule a voyagé jusqu’à nous sans perdre une grande partie de celle-ci.",
+  "posterite": "Les observatoires étudient ces événements rares pour comprendre les sources des rayons cosmiques. Les champs magnétiques peuvent dévier leur trajet, ce qui complique la recherche de l’objet qui les a émis à partir de leur direction d’arrivée.",
+  "anecdote": "En 2021, Telescope Array détecte un autre rayon cosmique extraordinaire, surnommé Amaterasu. Annoncé en 2023, cet événement rappelle que les particules les plus énergétiques continuent de poser une énigme aux chercheurs, même lorsque leur passage est solidement mesuré.",
+  "reference": {
+    "label": "Université de l’Utah, « Second highest-energy cosmic ray ever », 2023.",
+    "url": "https://science.utah.edu/faculty/faculty-research/cosmic-ray/"
+  },
+  "sketch": {
+    "motif": "trajectoire",
+    "caption": "Une trajectoire arrive sur Terre et se ramifie dans l’atmosphère."
+  },
+  "aliases": [
+    "Particule Oh-My-God"
+  ],
+  "pageId": 7688508,
+  "entity": "Q61931",
+  "date": "2026-11-27",
+  "number": 18
+}
